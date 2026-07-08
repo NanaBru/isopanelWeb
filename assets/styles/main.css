@@ -1,0 +1,482 @@
+/* Nota: variables.css se enlaza ANTES que este archivo en el <head>
+   del HTML (no se usa @import para no bloquear el render). */
+
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,p,ul{ margin:0; }
+img{ max-width:100%; display:block; }
+a{ color: inherit; text-decoration:none; }
+button{ font-family: inherit; cursor:pointer; }
+ul{ list-style:none; padding:0; }
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--z-nav);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: var(--space-sm) var(--gutter);
+  background: linear-gradient(180deg, rgba(3,4,94,0.55) 0%, rgba(3,4,94,0) 100%);
+  transition: background var(--dur-fast) var(--ease), padding var(--dur-fast) var(--ease);
+}
+.site-header.is-scrolled{
+  background: var(--navy-900);  
+  box-shadow: 0 2px 24px rgba(3,4,94,0.25);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.brand img{ height: 44px; width:auto; }
+.brand-name{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.main-nav{
+  display:flex;
+  align-items:center;
+  gap: var(--space-md);
+}
+.main-nav ul{
+  display:flex;
+  gap: 30px;
+}
+.main-nav a{
+  position:relative;
+  font-size: 0.92rem;
+  font-weight:500;
+  letter-spacing:0.02em;
+  color: var(--blue-100);
+  padding: 6px 0;
+}
+.main-nav a::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  width:0%;
+  height:1px;
+  background: var(--blue-400);
+  transition: width var(--dur-fast) var(--ease);
+}
+.main-nav a:hover{ color: var(--white); }
+.main-nav a:hover::after{ width:100%; }
+.main-nav a:focus-visible{
+  outline: 2px solid var(--blue-400);
+  outline-offset: 4px;
+}
+
+.btn-whatsapp{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border: 1px solid var(--blue-400);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.btn-whatsapp:hover{
+  background: var(--blue-500);
+  border-color: var(--blue-500);
+}
+.btn-whatsapp img{ height:18px; width:18px; }
+
+/* Botón hamburguesa (solo mobile) */
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  width: 32px;
+  height: 24px;
+  position:relative;
+  z-index: var(--z-nav);
+}
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:100%;
+  height:2px;
+  background: var(--white);
+  transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+}
+.nav-toggle span{ top:11px; }
+.nav-toggle span::before{ top:-9px; }
+.nav-toggle span::after{ top:9px; }
+.nav-toggle.is-active span{ background: transparent; }
+.nav-toggle.is-active span::before{ transform: translateY(9px) rotate(45deg); }
+.nav-toggle.is-active span::after{ transform: translateY(-9px) rotate(-45deg); }
+
+/* ============================================================
+   HERO — PRIMERA VISTA
+   ============================================================ */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+  background: var(--navy-900);
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(3,4,94,0.24) 0%, rgba(2,62,138,0.12) 45%, rgba(3,4,94,0.4) 100%),
+    url('../../img/fondo.png');
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+/* Escuadras técnicas — guiño a los planos de obra */
+.blueprint-corner{
+  position:absolute;
+  width: 42px;
+  height: 42px;
+  border-color: var(--blue-300);
+  opacity: 0.55;
+  z-index: 2;
+}
+.blueprint-corner--tl{ top: 100px; left: var(--gutter); border-top:1px solid; border-left:1px solid; }
+.blueprint-corner--br{ bottom: 56px; right: var(--gutter); border-bottom:1px solid; border-right:1px solid; }
+
+.hero-content{
+  position: relative;
+  z-index: 3;
+  padding: 0 var(--gutter);
+  max-width: 900px;
+}
+
+.eyebrow{
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  color: var(--blue-300);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-bottom: var(--space-sm);
+  opacity:0;
+  transform: translateY(14px);
+  animation: reveal-up var(--dur-med) var(--ease) 0.15s forwards;
+}
+.eyebrow::before{
+  content:"— ";
+  color: var(--blue-500);
+}
+
+.hero-content h1{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: 1.02;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  opacity:0;
+  transform: translateY(18px);
+  animation: reveal-up var(--dur-med) var(--ease) 0.32s forwards;
+}
+
+/* Línea "engrafada": firma visual de la marca.
+   Representa el sistema de unión engrafado de los paneles:
+   se "cierra" con una animación al cargar la página. */
+.seam-line{
+  width: 100%;
+  max-width: 420px;
+  margin: var(--space-md) 0;
+  opacity:0;
+  animation: reveal-up var(--dur-med) var(--ease) 0.5s forwards;
+}
+.seam-line svg{ width:100%; height:auto; overflow:visible; }
+.seam-line path{
+  stroke: var(--blue-400);
+  stroke-width: 2;
+  fill:none;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: draw-seam 1.4s var(--ease) 0.9s forwards;
+}
+
+.hero-lead{
+  font-size: var(--fs-lead);
+  color: var(--blue-100);
+  max-width: 560px;
+  margin-bottom: var(--space-md);
+  opacity:0;
+  transform: translateY(18px);
+  animation: reveal-up var(--dur-med) var(--ease) 0.62s forwards;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  opacity:0;
+  transform: translateY(18px);
+  animation: reveal-up var(--dur-med) var(--ease) 0.78s forwards;
+}
+
+.btn{
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.btn-primary{
+  background: var(--blue-500);
+  color: var(--navy-900);
+}
+.btn-primary:hover{
+  background: var(--blue-400);
+  box-shadow: 0 8px 28px rgba(0,180,216,0.35);
+  transform: translateY(-2px);
+}
+.btn-secondary{
+  border: 1px solid var(--blue-200);
+  color: var(--white);
+}
+.btn-secondary:hover{
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+.btn:focus-visible{
+  outline: 2px solid var(--blue-300);
+  outline-offset: 3px;
+}
+
+/* --- Barra de especificaciones (ficha técnica del servicio) --- */
+.spec-bar{
+  position: relative;
+  z-index: 3;
+  display:flex;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(202,240,248,0.22);
+  opacity:0;
+  animation: reveal-up var(--dur-med) var(--ease) 0.95s forwards;
+}
+.spec-item{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  padding: 22px var(--gutter);
+  border-right: 1px solid rgba(202,240,248,0.22);
+}
+.spec-item:last-child{ border-right:none; }
+.spec-item img{ height: 26px; width: 26px; flex-shrink:0; filter: invert(1); }
+.spec-text{ display:flex; flex-direction:column; }
+.spec-label{
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-300);
+}
+.spec-value{
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* --- Indicador de scroll --- */
+.scroll-cue{
+  position:absolute;
+  bottom: 130px;
+  right: var(--gutter);
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  opacity:0;
+  animation: reveal-up var(--dur-med) var(--ease) 1.1s forwards;
+}
+.scroll-cue span{
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--blue-300);
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+.scroll-cue .line{
+  width:1px;
+  height: 40px;
+  background: var(--blue-300);
+  position:relative;
+  overflow:hidden;
+}
+.scroll-cue .line::after{
+  content:"";
+  position:absolute;
+  top:-100%;
+  left:0;
+  width:100%;
+  height:100%;
+  background: var(--white);
+  animation: scroll-drip 1.8s ease-in-out infinite;
+}
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+@keyframes reveal-up{
+  to{ opacity:1; transform: translateY(0); }
+}
+@keyframes draw-seam{
+  to{ stroke-dashoffset: 0; }
+}
+@keyframes scroll-drip{
+  0%{ top:-100%; }
+  60%{ top:100%; }
+  100%{ top:100%; }
+}
+
+/* Clase genérica para animar elementos al entrar en viewport (scroll),
+   controlada por assets/js/main.js con IntersectionObserver.
+   Se usará en las próximas secciones. */
+.reveal{
+  opacity:0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal.is-visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ============================================================ */
+.whatsapp-float{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: var(--z-nav);
+  width: 56px;
+  height: 56px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--navy-900);
+  border: 1px solid var(--blue-400);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(3,4,94,0.35);
+  transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.whatsapp-float:hover{
+  background: var(--blue-500);
+  transform: translateY(-3px);
+}
+.whatsapp-float img{
+  width: 40px;
+  height: 40px;
+}
+.whatsapp-float:focus-visible{
+  outline: 2px solid var(--blue-300);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px){
+  .whatsapp-float{
+    right: 16px;
+    bottom: 16px;
+    width: 64px;
+    height: 64px;
+  }
+  .whatsapp-float img{ width: 50px; height: 50px; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px){
+  .main-nav ul{ gap: 20px; }
+}
+
+@media (max-width: 760px){
+  .main-nav ul{
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-nav);
+    background: var(--navy-900);
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap: var(--space-md);
+    transform: translateX(100%);
+    transition: transform var(--dur-med) var(--ease);
+  }
+  .main-nav ul.is-open{ transform: translateX(0); }
+  .main-nav a{ font-size: 1.2rem; }
+  .nav-toggle{ display:block; }
+  .btn-whatsapp span{ display:none; } /* solo ícono en mobile */
+
+  .hero-content{ padding-top: 90px; }
+  .blueprint-corner{ display:none; }
+  .scroll-cue{ display:none; }
+
+  .spec-bar{ flex-direction: column; }
+  .spec-item{
+    align-items: flex-start;
+    padding: 10px 24px;
+    border-right:none;
+    border-bottom: 1px solid rgba(202,240,248,0.22);
+  }
+  .spec-item:last-child{ border-bottom:none; }
+  .spec-item img{ margin-top: 2px; }
+  .spec-value{ line-height: 1.3; }
+}
+
+@media (max-width: 480px){
+  .spec-item{ padding: 8px 20px; gap: 12px; }
+  .spec-item img{ height: 22px; width: 22px; }
+  .spec-value{ font-size: 0.86rem; }
+}
+
+@media (max-width: 420px){
+  .hero-actions{ flex-direction: column; }
+  .btn{ text-align:center; }
+}

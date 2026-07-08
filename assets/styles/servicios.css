@@ -1,0 +1,202 @@
+/* ============================================================
+   SERVICIOS
+   ============================================================ */
+.section-servicios{ background: var(--blue-100); }
+
+.serv-intro{ max-width: 760px; margin-bottom: var(--space-lg); }
+.serv-intro h3{
+  font-size: 1.4rem;
+  font-weight:700;
+  color: var(--navy-900);
+  margin-bottom: var(--space-sm);
+}
+.serv-intro p{ color: rgba(10,17,40,0.78); }
+
+.techo-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.techo-card{
+  background: var(--white);
+  border: 1px solid rgba(10,17,40,0.1);
+}
+.techo-img{
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--blue-200);
+}
+.techo-body{ padding: var(--space-sm) var(--space-md) var(--space-md); }
+.techo-body h4{
+  font-size: 1.05rem;
+  font-weight:700;
+  color: var(--navy-900);
+  margin-bottom: 6px;
+}
+.techo-body p{ font-size: 0.88rem; color: rgba(10,17,40,0.7); }
+
+.llave-mano{
+  border-top: 1px solid rgba(10,17,40,0.12);
+  padding-top: var(--space-lg);
+  max-width: 760px;
+}
+.llave-mano h3{
+  font-size: 1.2rem;
+  font-weight:700;
+  color: var(--navy-900);
+  margin-bottom: var(--space-sm);
+}
+.llave-mano p{ color: rgba(10,17,40,0.78); }
+
+@media (max-width: 900px){
+  .techo-grid{ grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   CASA MARACANÁ
+   ============================================================ */
+.section-maracana{ background: var(--white); }
+
+.maracana-hero{
+  background: var(--navy-900);
+  padding: var(--space-xl) 0 var(--space-lg);
+  position: relative;
+  overflow:hidden;
+}
+.maracana-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(3,4,94,0.4) 0%, rgba(3,4,94,0.9) 100%),
+    url('../img/maracana/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+.maracana-hero .section-inner{ position:relative; z-index:1; padding-top:0; padding-bottom:0; }
+.maracana-hero .eyebrow{ color: var(--blue-300); }
+.maracana-hero .eyebrow::before{ color: var(--blue-500); }
+.maracana-title{
+  font-family: var(--font-display);
+  font-weight:800;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-sm);
+}
+.maracana-lead{
+  font-size: var(--fs-lead);
+  color: var(--blue-100);
+  max-width: 620px;
+}
+
+.maracana-body{ padding-top: var(--space-xl); }
+.mar-block{ margin-bottom: var(--space-xl); }
+.mar-block > p{ color: rgba(10,17,40,0.75); margin-bottom: var(--space-sm); }
+
+/* Revestimientos */
+.mar-swatches{ display:grid; grid-template-columns: 2fr 1fr; gap: var(--space-md); }
+.mar-preview{ aspect-ratio: 4/3; overflow:hidden; background: var(--blue-100); }
+.mar-preview img{ width:100%; height:100%; object-fit:cover; }
+.mar-swatch-list{ display:flex; flex-direction:column; gap: 8px; }
+.mar-swatch{
+  text-align:left;
+  padding: 14px 18px;
+  border: 1px solid rgba(10,17,40,0.15);
+  background: var(--white);
+  font-size: 0.9rem;
+  font-weight:600;
+  color: var(--navy-900);
+  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.mar-swatch:hover{ border-color: var(--blue-500); }
+.mar-swatch.is-active{ border-color: var(--blue-500); background: var(--blue-100); }
+
+/* Espesor */
+.mar-espesor{ display:flex; gap: 10px; margin-bottom: var(--space-sm); }
+.mar-esp-btn{
+  padding: 10px 22px;
+  border: 1px solid rgba(10,17,40,0.2);
+  background: var(--white);
+  font-weight:600;
+  font-size: 0.88rem;
+  color: var(--navy-900);
+}
+.mar-esp-btn.is-active{ background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+.mar-esp-text{ max-width: 560px; color: rgba(10,17,40,0.75); }
+
+/* Visor 360° (Pannellum) */
+.mar-360-viewer{
+  aspect-ratio: 21/9;
+  border: 1px solid rgba(10,17,40,0.12);
+  background: var(--navy-900);
+}
+
+@media (max-width: 760px){
+  .mar-360-viewer{ aspect-ratio: 4/3; }
+}
+
+/* Editor */
+.mar-editor{ margin-bottom: var(--space-md); }
+.mar-editor-label{
+  display:block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform:uppercase;
+  color: var(--blue-700);
+  margin-bottom: 8px;
+}
+.mar-editor-opts{ display:flex; gap: 8px; flex-wrap:wrap; }
+.mar-editor-opt{
+  padding: 8px 18px;
+  border: 1px solid rgba(10,17,40,0.2);
+  background: var(--white);
+  font-size: 0.85rem;
+  color: var(--navy-900);
+}
+.mar-editor-opt.is-active{ background: var(--blue-500); border-color: var(--blue-500); color: var(--navy-900); }
+.mar-editor-preview{
+  margin-top: var(--space-md);
+  aspect-ratio: 16/9;
+  max-width: 640px;
+  overflow:hidden;
+  background: var(--blue-100);
+}
+.mar-editor-preview img{ width:100%; height:100%; object-fit:cover; }
+
+/* Proceso */
+.mar-process-note{ font-style: italic; }
+.mar-steps{ display:flex; flex-direction:column; }
+.mar-steps li{
+  display:flex;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid rgba(10,17,40,0.1);
+}
+.mar-steps li:last-child{ border-bottom: 1px solid rgba(10,17,40,0.1); }
+.mar-step-num{
+  font-family: var(--font-mono);
+  color: var(--blue-500);
+  font-size: 1.1rem;
+  flex-shrink:0;
+}
+.mar-steps strong{ display:block; color: var(--navy-900); margin-bottom: 4px; }
+.mar-steps p{ color: rgba(10,17,40,0.7); font-size: 0.92rem; }
+
+.mar-bridge{
+  max-width: 760px;
+  border-top: 1px solid rgba(10,17,40,0.12);
+  padding-top: var(--space-lg);
+}
+.mar-bridge a{ color: var(--blue-700); font-weight:600; }
+.mar-bridge a:hover{ text-decoration:underline; }
+
+.mar-cta{ text-align:center; padding-top: var(--space-md); }
+
+@media (max-width: 760px){
+  .mar-swatches{ grid-template-columns: 1fr; }
+}

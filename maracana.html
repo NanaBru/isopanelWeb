@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Casa Maracaná | Isopanel Uruguay — Vivienda 49 m² en isopanel</title>
+<meta name="description" content="Casa Maracaná: la vivienda insignia de Isopanel Uruguay. 49 m² en isopanel, revestimientos y espesores a elección, y entrega llave en mano.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.isopaneluruguay.com/maracana.html">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_UY">
+<meta property="og:title" content="Casa Maracaná | Isopanel Uruguay">
+<meta property="og:description" content="La vivienda insignia de Isopanel Uruguay: 49 m² en isopanel, del plano a la llave en mano.">
+<meta property="og:image" content="https://www.isopaneluruguay.com/img/fondo.png">
+<meta property="og:url" content="https://www.isopaneluruguay.com/maracana.html">
+
+<link rel="icon" href="img/favicon.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles/variables.css">
+<link rel="stylesheet" href="assets/styles/main.css">
+<link rel="stylesheet" href="assets/styles/diferenciales.css">
+<link rel="stylesheet" href="assets/styles/servicios.css">
+<link rel="stylesheet" href="assets/styles/faq.css">
+
+<!-- Visor 360° — Pannellum (librería liviana, MIT) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER (idéntico al de index.html; los anchors de sección
+     apuntan de vuelta a index.html porque viven ahí)
+     ============================================================ -->
+<header class="site-header">
+  <a href="index.html#inicio" class="brand" aria-label="Isopanel Uruguay — Inicio">
+    <img src="img/logo.png" alt="Isopanel Uruguay">
+  </a>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#isopaneles">Isopaneles</a></li>
+      <li><a href="maracana.html" aria-current="page">Casa Maracaná</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#obras">Obras</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn-whatsapp" href="https://wa.me/59894692000" target="_blank" rel="noopener">
+      <img src="assets/icons/Logos/whatsapp-color.svg" alt="">
+      <span>Escribinos</span>
+    </a>
+  </nav>
+
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+  </button>
+</header>
+
+<!-- ============================================================
+     CASA MARACANÁ — mini-landing destacada
+     ============================================================ -->
+<section class="section-maracana">
+  <div class="maracana-hero">
+    <div class="section-inner">
+      <p class="eyebrow reveal">La perla de Isopanel Uruguay</p>
+      <h1 class="maracana-title reveal">Casa Maracaná</h1>
+      <p class="maracana-lead reveal">
+        Nuestro proyecto insignia: una vivienda de 49 m² pensada de punta a
+        punta en isopanel, del plano a la llave en mano. Es la síntesis de
+        todo lo que sabemos hacer.
+      </p>
+    </div>
+  </div>
+
+  <div class="section-inner maracana-body">
+
+    <!-- Revestimientos -->
+    <div class="mar-block reveal">
+      <h3 class="tab-subtitle">Revestimientos</h3>
+      <div class="mar-swatches" data-swatches>
+        <div class="mar-preview">
+          <!-- La imagen principal cambia según el revestimiento elegido.
+               Archivos esperados: assets/img/maracana/revestimiento-siding.jpg,
+               revestimiento-pvc.jpg, revestimiento-simil-madera.jpg,
+               revestimiento-liso.jpg -->
+          <img src="assets/img/maracana/revestimiento-siding.jpg" alt="Casa Maracaná — revestimiento" data-swatch-preview>
+        </div>
+        <div class="mar-swatch-list">
+          <button class="mar-swatch is-active" data-swatch="assets/img/maracana/revestimiento-siding.jpg">Siding</button>
+          <button class="mar-swatch" data-swatch="assets/img/maracana/revestimiento-pvc.jpg">PVC</button>
+          <button class="mar-swatch" data-swatch="assets/img/maracana/revestimiento-simil-madera.jpg">Símil madera</button>
+          <button class="mar-swatch" data-swatch="assets/img/maracana/revestimiento-liso.jpg">Liso</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Espesores configurables -->
+    <div class="mar-block reveal">
+      <h3 class="tab-subtitle">Espesores configurables</h3>
+      <div class="mar-espesor" data-espesor>
+        <button class="mar-esp-btn is-active" data-esp="50">50 mm</button>
+        <button class="mar-esp-btn" data-esp="80">80 mm</button>
+        <button class="mar-esp-btn" data-esp="100">100 mm</button>
+      </div>
+      <p class="mar-esp-text" data-esp-text>
+        50 mm — aislación estándar, ideal para climas templados y uso
+        habitacional habitual.
+      </p>
+    </div>
+
+    <!-- Vista 360 -->
+    <div class="mar-block reveal">
+      <h3 class="tab-subtitle">Vista 360°</h3>
+      <p>Arrastrá para recorrer la Casa Maracaná desde afuera.</p>
+      <!-- Visor panorámico con Pannellum (https://pannellum.org/), sobre la
+           imagen equirectangular assets/img/maracana/360-exterior.jpg -->
+      <div id="mar-360" class="mar-360-viewer"></div>
+    </div>
+
+    <!-- Modo editor -->
+    <div class="mar-block reveal">
+      <h3 class="tab-subtitle">Modo editor</h3>
+      <p>Elegí una opción y mirá cómo cambia la fachada.</p>
+
+      <div class="mar-editor" data-editor-group="puerta">
+        <span class="mar-editor-label">Puerta</span>
+        <div class="mar-editor-opts">
+          <!-- Imágenes esperadas: assets/img/maracana/puerta-blanca.jpg,
+               assets/img/maracana/puerta-madera.jpg, assets/img/maracana/puerta-negra.jpg -->
+          <button class="mar-editor-opt is-active" data-editor-img="assets/img/maracana/puerta-blanca.jpg">Blanca</button>
+          <button class="mar-editor-opt" data-editor-img="assets/img/maracana/puerta-madera.jpg">Madera</button>
+          <button class="mar-editor-opt" data-editor-img="assets/img/maracana/puerta-negra.jpg">Negra</button>
+        </div>
+      </div>
+
+      <div class="mar-editor" data-editor-group="ventana">
+        <span class="mar-editor-label">Ventana</span>
+        <div class="mar-editor-opts">
+          <!-- Imágenes esperadas: assets/img/maracana/ventana-aluminio.jpg,
+               assets/img/maracana/ventana-pvc.jpg -->
+          <button class="mar-editor-opt is-active" data-editor-img="assets/img/maracana/ventana-aluminio.jpg">Aluminio</button>
+          <button class="mar-editor-opt" data-editor-img="assets/img/maracana/ventana-pvc.jpg">PVC</button>
+        </div>
+      </div>
+
+      <div class="mar-editor-preview">
+        <img src="assets/img/maracana/puerta-blanca.jpg" alt="Casa Maracaná — vista personalizada" data-editor-preview>
+      </div>
+    </div>
+
+    <!-- Proceso de obra -->
+    <div class="mar-block reveal">
+      <h3 class="tab-subtitle">Proceso completo de obra</h3>
+      <p class="mar-process-note">El mismo proceso aplica también a los módulos más chicos, de 15, 30 y 49 m².</p>
+      <ol class="mar-steps">
+        <li><span class="mar-step-num">01</span><div><strong>Nivelación de terreno</strong><p>Preparamos el lugar donde va a apoyar la vivienda.</p></div></li>
+        <li><span class="mar-step-num">02</span><div><strong>Trámites con la intendencia</strong><p>Te acompañamos en las gestiones necesarias antes de construir.</p></div></li>
+        <li><span class="mar-step-num">03</span><div><strong>Arquitectos disponibles</strong><p>Contamos con arquitectos para ajustar el proyecto a tu terreno.</p></div></li>
+        <li><span class="mar-step-num">04</span><div><strong>Cierre de obra e instalación eléctrica</strong><p>Levantamos la estructura y dejamos la instalación eléctrica lista.</p></div></li>
+        <li><span class="mar-step-num">05</span><div><strong>Entrega llave en mano</strong><p>Casa terminada, incluyendo detalles como la parrilla.</p></div></li>
+      </ol>
+    </div>
+
+    <p class="mar-bridge reveal">
+      El mismo equipo que lideró la Casa Maracaná es el que resuelve galpones,
+      naves industriales, interiores, pintura de isopaneles y techos en toda
+      la obra que hacemos — con la misma confianza, mano de obra, agilidad y
+      comodidad. <a href="index.html#obras">Conocé nuestras obras →</a>
+    </p>
+
+    <div class="mar-cta reveal">
+      <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="btn btn-primary">Solicitar presupuesto para mi Casa Maracaná</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p>Ruta Interbalnearia, Fortín de Santa Rosa, Canelones, Uruguay</p>
+    <p>Isopanel Uruguay © 2026</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribinos por WhatsApp">
+  <img src="assets/icons/Logos/whatsapp-color.svg" alt="">
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  if (window.pannellum) {
+    pannellum.viewer('mar-360', {
+      type: 'equirectangular',
+      panorama: 'assets/img/maracana/360-exterior.jpg',
+      autoLoad: true,
+      compass: false,
+      showZoomCtrl: true,
+      title: 'Casa Maracaná',
+      hfov: 100
+    });
+  }
+</script>
+</body>
+</html>

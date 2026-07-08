@@ -1,0 +1,58 @@
+/* ============================================================
+   ISOPANEL URUGUAY — TOKENS DE DISEÑO
+   Concepto: "Planos técnicos" — precisión de ingeniería,
+   inspirado en el sistema de unión engrafado de los paneles
+   y en los planos de obra. Formal, sobrio, sin decoración
+   gratuita.
+   ============================================================ */
+
+:root{
+
+  /* --- Paleta (definida por el cliente) --- */
+  --navy-900:#03045e;
+  --navy-800:#023e8a;
+  --blue-700:#0077b6;
+  --blue-600:#0096c7;
+  --blue-500:#00b4d8;
+  --blue-400:#48cae4;
+  --blue-300:#90e0ef;
+  --blue-200:#ade8f4;
+  --blue-100:#caf0f8;
+  --white:#ffffff;
+  --ink:#0a1128; /* negro-azulado para texto sobre fondos claros */
+
+  /* --- Tipografía --- */
+  --font-display:'Montserrat', 'Segoe UI', sans-serif;
+  --font-body:'Montserrat', 'Segoe UI', sans-serif;
+  --font-mono:'JetBrains Mono', 'Courier New', monospace; /* etiquetas técnicas / specs */
+
+  /* --- Escala tipográfica --- */
+  --fs-eyebrow: 0.78rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.15rem;
+  --fs-h3: 1.5rem;
+  --fs-h2: 2.25rem;
+  --fs-h1: clamp(2.6rem, 6vw, 5.2rem);
+
+  /* --- Espaciados --- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 112px;
+  --gutter: 6vw;
+
+  /* --- Bordes / radios (deliberadamente casi rectos: estética de plano técnico) --- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* --- Transiciones --- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.25s;
+  --dur-med: 0.6s;
+  --dur-slow: 1.1s;
+
+  /* --- Capas --- */
+  --z-nav: 100;
+  --z-overlay: 10;
+}
