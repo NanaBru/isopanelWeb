@@ -164,7 +164,7 @@ ul{ list-style:none; padding:0; }
   inset:0;
   background-image:
     linear-gradient(180deg, rgba(3,4,94,0.24) 0%, rgba(2,62,138,0.12) 45%, rgba(3,4,94,0.4) 100%),
-    url('../../img/fondo.png');
+    url('../img/IsoElite18.jpeg');
   background-size: cover;
   background-position: center;
   will-change: transform;
@@ -441,7 +441,12 @@ ul{ list-style:none; padding:0; }
     position: fixed;
     inset: 0;
     z-index: var(--z-nav);
-    background: var(--navy-900);
+    background:
+      linear-gradient(rgba(0,119,182,0.55), rgba(0,119,182,0.55)),
+      url('../img/fondo-logo.webp');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(6px);
     flex-direction: column;
     justify-content:center;
     align-items:center;
@@ -452,7 +457,7 @@ ul{ list-style:none; padding:0; }
   .main-nav ul.is-open{ transform: translateX(0); }
   .main-nav a{ font-size: 1.2rem; }
   .nav-toggle{ display:block; }
-  .btn-whatsapp span{ display:none; } /* solo ícono en mobile */
+  .btn-whatsapp{ display:none; } /* oculto en mobile, queda el flotante */
 
   .hero-content{ padding-top: 90px; }
   .blueprint-corner{ display:none; }

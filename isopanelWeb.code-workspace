@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "isopanelWeb",
+			"path": "."
+		},
+		
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "isopanelWeb"
+	}
+}

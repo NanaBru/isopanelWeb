@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- 7) Casa Maracaná: selector de espesor --- */
   const espesorTextos = {
-    '50': '50 mm — aislación estándar, ideal para climas templados y uso habitacional habitual.',
-    '80': '80 mm — mayor aislación térmica y acústica, recomendado para uso todo el año.',
-    '100': '100 mm — máximo rendimiento térmico, pensado para exigencias de confort superiores.'
+    '100': '100 mm — aislación estándar, ideal para climas templados y uso habitacional habitual.',
+    '150': '150 mm — mayor aislación térmica y acústica, recomendado para uso todo el año.',
+    '200': '200 mm — máximo rendimiento térmico, pensado para exigencias de confort superiores.'
   };
   document.querySelectorAll('[data-espesor]').forEach(group => {
     const text = group.parentElement.querySelector('[data-esp-text]');
@@ -138,22 +138,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* --- 9) Obras: lightbox --- */
+  /* --- 9) Obras: lightbox con galería (varias fotos por proyecto) --- */
   const lightbox = document.querySelector('[data-lightbox]');
   if (lightbox) {
     const fullImg = lightbox.querySelector('[data-lightbox-full]');
     const captionEl = lightbox.querySelector('[data-lightbox-caption-el]');
-    document.querySelectorAll('[data-lightbox-img]').forEach(item => {
+    const counterEl = lightbox.querySelector('[data-lightbox-counter]');
+    const prevBtn = lightbox.querySelector('[data-lightbox-prev]');
+    const nextBtn = lightbox.querySelector('[data-lightbox-next]');
+
+    let photos = [];
+    let caption = '';
+    let index = 0;
+
+    const render = () => {
+      fullImg.src = photos[index];
+      captionEl.textContent = caption;
+      counterEl.textContent = photos.length > 1 ? `${index + 1} / ${photos.length}` : '';
+      const showNav = photos.length > 1;
+      prevBtn.hidden = !showNav;
+      nextBtn.hidden = !showNav;
+    };
+
+    document.querySelectorAll('[data-lightbox-key]').forEach(item => {
       item.addEventListener('click', () => {
-        fullImg.src = item.dataset.lightboxImg;
-        captionEl.textContent = item.dataset.lightboxCaption || '';
+        const key = item.dataset.lightboxKey;
+        const count = parseInt(item.dataset.lightboxCount, 10) || 1;
+        photos = Array.from({ length: count }, (_, i) =>
+          `assets/img/obras/gallery/${key}/${String(i + 1).padStart(2, '0')}.jpg`
+        );
+        caption = item.dataset.lightboxCaption || '';
+        index = 0;
+        render();
         lightbox.hidden = false;
       });
     });
+
+    const showPrev = () => { index = (index - 1 + photos.length) % photos.length; render(); };
+    const showNext = () => { index = (index + 1) % photos.length; render(); };
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
     const closeLightbox = () => { lightbox.hidden = true; };
     lightbox.querySelector('[data-lightbox-close]')?.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
   }
 
   /* --- 10) FAQ: acordeón (una pregunta abierta a la vez) --- */
