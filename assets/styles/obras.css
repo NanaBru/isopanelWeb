@@ -134,6 +134,29 @@
   .obras-grid{ grid-template-columns: 1fr; }
 }
 
+.obras-show-more{ display:none; }
+
+@media (max-width: 760px){
+  .obras-grid{ margin-bottom: var(--space-sm); }
+  .obras-grid > *:nth-child(n+3){ display:none; }
+  .obras-grid.is-expanded > *:nth-child(n+3){ display:flex; }
+
+  .obras-show-more{
+    display:block;
+    width:100%;
+    margin-bottom: var(--space-xl);
+    background:none;
+    border: 1px solid var(--blue-500);
+    color: var(--blue-700);
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    font-weight:600;
+    text-align:center;
+    transition: background var(--dur-fast) var(--ease);
+  }
+  .obras-show-more:hover{ background: var(--blue-100); }
+}
+
 /* ============================================================
    CLUB DEL COLOCADOR
    ============================================================ */

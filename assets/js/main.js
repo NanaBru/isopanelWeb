@@ -212,6 +212,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- 11b) Obras: "Ver más" (solo mobile) --- */
+  document.querySelectorAll('[data-obras-show-more]').forEach(btn => {
+    const grid = document.querySelector('.obras-grid');
+    if (!grid) return;
+    btn.addEventListener('click', () => {
+      const expanded = grid.classList.toggle('is-expanded');
+      btn.textContent = expanded ? 'Ver menos' : 'Ver más';
+    });
+  });
+
   /* --- 11) Diferenciales: "Mostrar más" (solo mobile) --- */
   document.querySelectorAll('[data-show-more]').forEach(btn => {
     btn.addEventListener('click', () => {
