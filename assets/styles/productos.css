@@ -2,13 +2,15 @@
    PRODUCTOS
    ============================================================ */
 .section-productos{ background: var(--blue-100); }
+.section-productos .section-inner{ padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.section-productos .section-title{ margin-bottom: var(--space-sm); }
 
 .tabs-nav{
   display:flex;
   flex-wrap:wrap;
   gap: 4px;
   border-bottom: 1px solid rgba(10,17,40,0.12);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 .tab-btn{
   background:none;
@@ -42,7 +44,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--blue-700);
-  margin: var(--space-lg) 0 var(--space-sm);
+  margin: var(--space-md) 0 var(--space-sm);
 }
 .tab-subtitle:first-child{ margin-top:0; }
 
@@ -50,7 +52,7 @@
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 .prod-grid--pir,
 .prod-grid--sellado{ grid-template-columns: repeat(3, 1fr); }
@@ -152,7 +154,7 @@
   transform: rotate(45deg);
 }
 
-.chip-grid{ display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: var(--space-lg); }
+.chip-grid{ display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: var(--space-md); }
 .chip{
   font-size: 0.82rem;
   padding: 8px 16px;

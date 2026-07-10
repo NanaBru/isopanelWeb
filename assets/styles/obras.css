@@ -2,20 +2,22 @@
    OBRAS
    ============================================================ */
 .section-obras{ background: var(--white); }
+.section-obras .section-inner{ padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.section-obras .section-title{ margin-bottom: var(--space-sm); }
 
 .obras-hook{
   font-size: var(--fs-lead);
   color: var(--navy-900);
   font-weight:600;
   max-width: 640px;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .obras-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 .obras-item{
   position:relative;
@@ -112,6 +114,8 @@
   .lightbox-prev{ left: var(--space-sm); }
   .lightbox-next{ right: var(--space-sm); }
 }
+
+.clientes .tab-subtitle{ margin-top: var(--space-sm); }
 
 .clientes-strip{
   display:flex;

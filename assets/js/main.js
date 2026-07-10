@@ -212,6 +212,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- 11a) Quiénes somos: sección desplegable, cerrada por defecto --- */
+  document.querySelectorAll('[data-collapsible-btn]').forEach(btn => {
+    const panel = btn.parentElement.querySelector('[data-collapsible-panel]');
+    if (!panel) return;
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      panel.style.maxHeight = isOpen ? null : panel.scrollHeight + 'px';
+      btn.textContent = isOpen ? 'Ver más' : 'Ver menos';
+    });
+  });
+
   /* --- 11b) Obras: "Ver más" (solo mobile) --- */
   document.querySelectorAll('[data-obras-show-more]').forEach(btn => {
     const grid = document.querySelector('.obras-grid');
