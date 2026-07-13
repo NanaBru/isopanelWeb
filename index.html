@@ -81,7 +81,14 @@
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#isopaneles">Isopaneles</a></li>
       <li><a href="guia-isopaneles.html">Guía Isopaneles</a></li>
-      <li><a href="maracana.html">Casa Maracaná</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-btn" aria-expanded="false">Módulos</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="casa-olimpica.html">Casa Olímpica</a></li>
+          <li><a href="casa-tiny.html">Tiny</a></li>
+          <li><a href="maracana.html">Casa Maracaná</a></li>
+        </ul>
+      </li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#obras">Obras</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -195,13 +202,13 @@
           <p>Resistencia y eficiencia para techos expuestos. EPS o PIR de alta densidad. Ideal galpones, depósitos, industrias y garajes.</p>
         </div>
       </article>
-      <article class="techo-card reveal">
+      <button type="button" class="techo-card techo-card--link reveal" data-picker-open="isoelite">
         <div class="techo-img" style="background-image:url('assets/img/servicios/isoelite.jpg')"></div>
         <div class="techo-body">
           <h4>IsoElite</h4>
           <p>Panel liso más teja asfáltica americana, sobre estructura metálica, isopanel o tradicional. Barrera hídrica incorporada. Ideal viviendas y quinchos.</p>
         </div>
-      </article>
+      </button>
     </div>
 
     <div class="serv-intro reveal">
@@ -224,36 +231,37 @@
     <p class="obras-hook reveal">Cada techo, galpón y vivienda que entregamos es un cliente que vuelve a llamarnos para la próxima obra.</p>
 
     <div class="obras-grid" data-lightbox-group>
-      <button class="obras-item reveal" data-lightbox-key="ebital" data-lightbox-count="18" data-lightbox-caption="Ebital">
-        <img src="assets/img/obras/ebital-01.jpg" alt="Obra Ebital">
+      <button class="obras-item reveal" data-lightbox-key="ebital" data-lightbox-ext="webp" data-lightbox-count="16" data-lightbox-caption="Ebital">
+        <img src="assets/img/obras2/gallery/ebital/01.webp" alt="Obra Ebital">
         <span>Ebital</span>
       </button>
-      <button class="obras-item reveal" data-lightbox-key="cooperativa-tobati" data-lightbox-count="10" data-lightbox-caption="Cooperativa Tobatí">
-        <img src="assets/img/obras/cooperativa-tobati-01.jpg" alt="Cooperativa Tobatí">
+      <button class="obras-item reveal" data-lightbox-key="cooperativa-tobati" data-lightbox-ext="webp" data-lightbox-count="7" data-lightbox-caption="Cooperativa Tobatí">
+        <img src="assets/img/obras2/gallery/cooperativa-tobati/01.webp" alt="Cooperativa Tobatí">
         <span>Cooperativa Tobatí</span>
       </button>
-      <button class="obras-item reveal" data-lightbox-key="las-acacias" data-lightbox-count="7" data-lightbox-caption="Las Acacias">
-        <img src="assets/img/obras/las-acacias-01.jpg" alt="Las Acacias">
+      <button class="obras-item reveal" data-lightbox-key="las-acacias" data-lightbox-ext="webp" data-lightbox-count="7" data-lightbox-caption="Las Acacias">
+        <img src="assets/img/obras2/gallery/las-acacias/01.webp" alt="Las Acacias">
         <span>Las Acacias</span>
       </button>
-      <button class="obras-item reveal" data-lightbox-key="los-olivares" data-lightbox-count="30" data-lightbox-caption="Los Olivares">
-        <img src="assets/img/obras/los-olivares-01.jpg" alt="Los Olivares">
+      <button class="obras-item reveal" data-lightbox-key="los-olivares" data-lightbox-ext="webp" data-lightbox-count="17" data-lightbox-caption="Los Olivares">
+        <img src="assets/img/obras2/gallery/los-olivares/01.webp" alt="Los Olivares">
         <span>Los Olivares</span>
       </button>
-      <div class="obras-item obras-item--text reveal">
+      <button class="obras-item reveal" data-picker-open="modulos">
+        <img src="assets/img/obras2/modulos/la-esmeralda/01.webp" alt="Casas Llave en Mano">
         <span>Casas Llave en Mano</span>
-      </div>
-      <button class="obras-item reveal" data-lightbox-key="techos" data-lightbox-count="37" data-lightbox-caption="Techos">
-        <img src="assets/img/obras/techos-01.jpg" alt="Techos">
+      </button>
+      <button class="obras-item reveal" data-lightbox-key="techos" data-lightbox-ext="webp" data-lightbox-count="37" data-lightbox-caption="Techos">
+        <img src="assets/img/obras2/gallery/techos/01.webp" alt="Techos">
         <span>Techos</span>
       </button>
-      <button class="obras-item reveal" data-lightbox-key="isoelite" data-lightbox-count="35" data-lightbox-caption="IsoElite">
-        <img src="assets/img/obras/isoelite-01.jpg" alt="IsoElite">
+      <button class="obras-item reveal" data-picker-open="isoelite">
+        <img src="assets/img/obras2/isoElite/costa-azul/01.webp" alt="IsoElite">
         <span>IsoElite</span>
       </button>
-      <button class="obras-item reveal" data-lightbox-key="global-import" data-lightbox-count="4" data-lightbox-caption="Galpón para Global Import">
-        <img src="assets/img/obras/global-import-01.jpg" alt="Galpón para Global Import">
-        <span>Galpón para Global Import</span>
+      <button class="obras-item reveal" data-lightbox-key="global-import" data-lightbox-ext="webp" data-lightbox-count="4" data-lightbox-caption="Galpones">
+        <img src="assets/img/obras2/gallery/global-import/01.webp" alt="Galpones">
+        <span>Galpones</span>
       </button>
       <div class="obras-item obras-item--text reveal">
         <span>Laboratorio Microsules</span>
@@ -277,6 +285,50 @@
           <span class="lightbox-counter" data-lightbox-counter></span>
         </figcaption>
       </figure>
+    </div>
+
+    <!-- IsoElite: selector de proyecto (disparado desde Servicios y Obras) -->
+    <div class="project-picker" data-picker="isoelite" hidden>
+      <button class="lightbox-close" data-picker-close aria-label="Cerrar">✕</button>
+      <div class="project-picker-inner">
+        <h3>IsoElite — Elegí un proyecto</h3>
+        <div class="project-picker-grid">
+          <button class="project-picker-item" data-lightbox-key="isoelite-costa-azul" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/isoElite/costa-azul" data-lightbox-count="16" data-lightbox-caption="IsoElite Costa Azul">
+            <img src="assets/img/obras2/isoElite/costa-azul/01.webp" alt="IsoElite Costa Azul">
+            <span>Costa Azul</span>
+          </button>
+          <button class="project-picker-item" data-lightbox-key="isoelite-mercedes" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/isoElite/mercedes" data-lightbox-count="14" data-lightbox-caption="IsoElite Mercedes">
+            <img src="assets/img/obras2/isoElite/mercedes/01.webp" alt="IsoElite Mercedes">
+            <span>Mercedes</span>
+          </button>
+          <button class="project-picker-item" data-lightbox-key="isoelite-salinas" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/isoElite/salinas" data-lightbox-count="11" data-lightbox-caption="IsoElite Salinas">
+            <img src="assets/img/obras2/isoElite/salinas/01.webp" alt="IsoElite Salinas">
+            <span>Salinas</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Casas Llave en Mano: selector de proyecto -->
+    <div class="project-picker" data-picker="modulos" hidden>
+      <button class="lightbox-close" data-picker-close aria-label="Cerrar">✕</button>
+      <div class="project-picker-inner">
+        <h3>Casas Llave en Mano — Elegí un proyecto</h3>
+        <div class="project-picker-grid">
+          <button class="project-picker-item" data-lightbox-key="modulos-la-esmeralda" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/modulos/la-esmeralda" data-lightbox-count="13" data-lightbox-caption="La Esmeralda">
+            <img src="assets/img/obras2/modulos/la-esmeralda/01.webp" alt="La Esmeralda">
+            <span>La Esmeralda</span>
+          </button>
+          <button class="project-picker-item" data-lightbox-key="modulos-villa" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/modulos/villa" data-lightbox-count="13" data-lightbox-caption="Villa">
+            <img src="assets/img/obras2/modulos/villa/01.webp" alt="Villa">
+            <span>Villa</span>
+          </button>
+          <button class="project-picker-item" data-lightbox-key="modulos-bella-vista" data-lightbox-ext="webp" data-lightbox-folder="assets/img/obras2/modulos/bella-vista" data-lightbox-count="7" data-lightbox-caption="Bella Vista">
+            <img src="assets/img/obras2/modulos/bella-vista/01.webp" alt="Bella Vista">
+            <span>Bella Vista</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="clientes reveal">
@@ -316,16 +368,34 @@
         <div class="prod-grid">
           <article class="prod-card reveal">
             <span class="prod-tag">Línea Balance</span>
-            <h3>EPS Montfrío</h3>
+            <h3>EPS Montfrío Techo</h3>
             <p class="prod-claim">El equilibrio perfecto entre rendimiento y costo.</p>
             <ul class="prod-specs">
               <li><span>Ancho útil</span><strong>113,5 cm</strong></li>
               <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
-              <li><span>Terminación</span><strong>Chapa galvanizada prepintada blanco o tablillado</strong></li>
+              <li><span>Terminación</span><strong>Chapa galvanizada prepintada blanco, Liso o Rayado</strong></li>
               <li><span>Unión</span><strong>Engrafada</strong></li>
-              <li><span>Garantía</span><strong>1 año</strong></li>
             </ul>
-            <a href="#contacto" class="btn btn-outline">Consultá por Línea Balance</a>
+            <div class="prod-actions">
+              <a href="#contacto" class="btn btn-outline">Consultá por Línea Balance</a>
+              <a href="assets/fichas%20tecnicas/paneles-eps-techo.pdf" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica (PDF)</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <span class="prod-tag">Línea Balance</span>
+            <h3>EPS Montfrío Pared</h3>
+            <p class="prod-claim">El equilibrio perfecto entre rendimiento y costo.</p>
+            <ul class="prod-specs">
+              <li><span>Ancho útil</span><strong>113,5 cm</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Terminación</span><strong>Chapa galvanizada prepintada blanco, Liso o Rayado</strong></li>
+              <li><span>Unión</span><strong>Autoencastre</strong></li>
+            </ul>
+            <div class="prod-actions">
+              <a href="#contacto" class="btn btn-outline">Consultá por Línea Balance</a>
+              <a href="assets/fichas%20tecnicas/paneles-eps-pared.pdf" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica (PDF)</a>
+            </div>
           </article>
         </div>
 
@@ -336,8 +406,13 @@
             </thead>
             <tbody>
               <tr>
-                <td>Balance</td>
-                <td>Ancho útil 113,5 cm · espesores 50–250 mm · chapa prepintada blanco o tablillado</td>
+                <td>Balance Techo</td>
+                <td>Ancho útil 113,5 cm · espesores 50–250 mm · chapa prepintada blanco, liso o rayado · unión engrafada</td>
+                <td>Obras residenciales y comerciales con buena relación rendimiento/costo</td>
+              </tr>
+              <tr>
+                <td>Balance Pared</td>
+                <td>Ancho útil 113,5 cm · espesores 50–250 mm · chapa prepintada blanco, liso o rayado · unión autoencastre</td>
                 <td>Obras residenciales y comerciales con buena relación rendimiento/costo</td>
               </tr>
             </tbody>
@@ -349,90 +424,225 @@
       <div class="tab-panel" data-tab-panel="pir" role="tabpanel">
         <p class="prod-claim reveal">Máxima eficiencia térmica, seguridad y variedad de soluciones.</p>
 
-        <!--
-          NOTA PARA EL CLIENTE / PRÓXIMA ITERACIÓN:
-          El detalle completo de ancho útil, espesores, colores y uso de cada
-          línea PIR (ISODEC PIR, ISOROOF 3G, ISOROOF PLUS PIR, ISOROOF FOIL /
-          ECO FOIL, ISOWALL PIR, ISOFRIG PIR) está en el documento fuente
-          "NUEVO_SITE.pdf" y todavía no fue provisto. Las fichas de abajo
-          quedan con la estructura lista y specs marcadas "A confirmar" —
-          reemplazar apenas se entregue el PDF con el detalle técnico.
-        -->
+        <h3 class="tab-subtitle reveal">Techo</h3>
         <div class="prod-grid prod-grid--pir reveal">
           <article class="prod-card prod-card--sm">
-            <h3>ISODEC PIR</h3>
+            <h3>ISODEC</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>112 cm</strong></li>
+              <li><span>Espesores</span><strong>50, 80 y 120 mm</strong></li>
+              <li><span>Color</span><strong>Blanco</strong></li>
             </ul>
           </article>
           <article class="prod-card prod-card--sm">
             <h3>ISOROOF 3G</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>30, 40, 50, 80 y 100 mm</strong></li>
+              <li><span>Color</span><strong>Blanco/gris/rojo, int. blanco</strong></li>
             </ul>
           </article>
           <article class="prod-card prod-card--sm">
-            <h3>ISOROOF PLUS PIR</h3>
+            <h3>ISOROOF PLUS</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>30, 50 y 80 mm</strong></li>
+              <li><span>Color</span><strong>Blanco/gris/rojo, int. imit. madera</strong></li>
             </ul>
           </article>
           <article class="prod-card prod-card--sm">
-            <h3>ISOROOF FOIL / ECO FOIL</h3>
+            <h3>ISOROOF FOIL</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>30 y 50 mm</strong></li>
+              <li><span>Color</span><strong>Blanco/gris/rojo, int. film blanco</strong></li>
             </ul>
           </article>
           <article class="prod-card prod-card--sm">
-            <h3>ISOWALL PIR</h3>
+            <h3>ISOROOF ECO FOIL</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>30 mm</strong></li>
+              <li><span>Color</span><strong>Acero/chapa, int. film blanco</strong></li>
             </ul>
           </article>
           <article class="prod-card prod-card--sm">
-            <h3>ISOFRIG PIR</h3>
+            <h3>PU Trapezoidal</h3>
             <ul class="prod-specs">
-              <li><span>Ancho útil</span><strong>A confirmar</strong></li>
-              <li><span>Espesores</span><strong>A confirmar</strong></li>
-              <li><span>Uso</span><strong>A confirmar</strong></li>
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>50 mm</strong></li>
+              <li><span>Color</span><strong>Gris/rojo, int. blanco</strong></li>
             </ul>
           </article>
         </div>
-        <a href="#contacto" class="btn btn-outline reveal">Consultá por la Línea PIR</a>
+        <a href="assets/fichas%20tecnicas/paneles-pir-techo.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica PIR Techo (PDF)</a>
+
+        <h3 class="tab-subtitle reveal">Pared</h3>
+        <div class="prod-grid prod-grid--pir reveal">
+          <article class="prod-card prod-card--sm">
+            <h3>ISOWALL</h3>
+            <ul class="prod-specs">
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>50 mm</strong></li>
+              <li><span>Color</span><strong>Blanco/gris/rojo, int. blanco</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>ISOFRIG</h3>
+            <ul class="prod-specs">
+              <li><span>Ancho útil</span><strong>100 cm</strong></li>
+              <li><span>Espesores</span><strong>40 a 200 mm</strong></li>
+              <li><span>Color</span><strong>Blanco</strong></li>
+              <li><span>Uso</span><strong>Residencial o cámaras frigoríficas</strong></li>
+            </ul>
+          </article>
+        </div>
+        <a href="assets/fichas%20tecnicas/paneles-pir-pared.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica PIR Pared (PDF)</a>
+
+        <p class="reveal" style="margin-top: var(--space-md);">
+          <a href="#contacto" class="btn btn-outline">Consultá por la Línea PIR</a>
+        </p>
       </div>
 
       <!-- ===== PERFILES ===== -->
       <div class="tab-panel" data-tab-panel="perfiles" role="tabpanel">
-        <div class="prod-grid">
-          <article class="prod-card reveal">
-            <span class="prod-tag">Standard</span>
-            <h3>Perfiles Standard</h3>
+        <h3 class="tab-subtitle reveal">Accesorios para Techo</h3>
+        <div class="prod-grid prod-grid--pir reveal">
+          <article class="prod-card prod-card--sm">
+            <h3>Frontal Gotero</h3>
             <ul class="prod-specs">
-              <li><span>Largo</span><strong>3 metros</strong></li>
-              <li><span>Color</span><strong>Blanco</strong></li>
-              <li><span>Instalación</span><strong>Rápida</strong></li>
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
             </ul>
-            <a href="#contacto" class="btn btn-outline">Consultá Disponibilidad</a>
           </article>
-          <article class="prod-card reveal">
-            <span class="prod-tag">Exclusive</span>
-            <h3>Exclusive by Isopanel Uruguay</h3>
-            <p class="prod-claim">Diseño, precisión y personalización en cada detalle.</p>
+          <article class="prod-card prod-card--sm">
+            <h3>Lateral Gotero</h3>
             <ul class="prod-specs">
-              <li><span>Corte</span><strong>A medida</strong></li>
-              <li><span>Colores</span><strong>Paleta a elección</strong></li>
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
             </ul>
-            <a href="#contacto" class="btn btn-outline">Consultá por Exclusive</a>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Canalón</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Cumbrera</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Babeta</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Frontal Gotero PU</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>PU/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Lateral Gotero PU</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>PU/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="tab-subtitle reveal">Accesorios para Pared</h3>
+        <div class="prod-grid prod-grid--pir reveal">
+          <article class="prod-card prod-card--sm">
+            <h3>U</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Ángulo Exterior</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Ángulo Interior</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>3 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Ángulo Estructural Aluminio</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>5,75 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Ángulo Estructural Galvanizado</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>6 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>PGU</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>6 m</strong></li>
+            </ul>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>PGU Blanco</h3>
+            <ul class="prod-specs">
+              <li><span>Material</span><strong>EPS/PIR</strong></li>
+              <li><span>Espesores</span><strong>50 a 250 mm</strong></li>
+              <li><span>Largo</span><strong>6 m</strong></li>
+            </ul>
+          </article>
+        </div>
+        <a href="assets/fichas%20tecnicas/Accesorios.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica Accesorios (PDF)</a>
+
+        <h3 class="tab-subtitle reveal">Productos Exclusivos</h3>
+        <div class="prod-grid reveal">
+          <article class="prod-card prod-card--wide">
+            <div class="prod-card--wide-main">
+              <span class="prod-tag">Productos Exclusivos</span>
+              <h3>Exclusive by Isopanel Uruguay — Perfiles a tu medida, en tu color</h3>
+              <p class="prod-claim">Diseño, precisión y personalización en cada detalle.</p>
+              <p>Exclusive by Isopanel Uruguay es nuestra línea premium de perfiles a medida, con la posibilidad de elegir entre una amplia paleta de colores para adaptarse a cualquier proyecto. Se pueden hacer de hasta 6 metros — consultá paleta de colores y medidas aún mayores.</p>
+              <a href="#contacto" class="btn btn-outline">Consultá por Exclusive</a>
+            </div>
+            <ul class="prod-specs">
+              <li><span>Corte</span><strong>Dimensiones personalizadas</strong></li>
+              <li><span>Largo</span><strong>Hasta 6 metros</strong></li>
+              <li><span>Colores</span><strong>Amplia paleta a elección</strong></li>
+              <li><span>Calidad</span><strong>Superior, entrega optimizada</strong></li>
+            </ul>
           </article>
         </div>
       </div>
@@ -440,25 +650,36 @@
       <!-- ===== TORNILLERÍA ===== -->
       <div class="tab-panel" data-tab-panel="tornilleria" role="tabpanel">
         <h3 class="tab-subtitle reveal">Kits de anclaje para techo</h3>
-        <ul class="check-list reveal">
-          <li>Anclaje a hormigón</li>
-          <li>Anclaje isopanel con isopanel</li>
-          <li>Anclaje a hierro</li>
-          <li>Otros anclajes según estructura</li>
-        </ul>
+        <div class="prod-grid prod-grid--sellado reveal">
+          <article class="prod-card prod-card--sm">
+            <h3>Hormigón</h3>
+            <p>Taco metálico, varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</p>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Isopanel con Isopanel</h3>
+            <p>Pieza en "L", varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</p>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Hierro</h3>
+            <p>Tuerca, arandela carrocero, arandela carrocero, tuerca, varilla roscada y tapa siliconada blanca.</p>
+          </article>
+          <article class="prod-card prod-card--sm">
+            <h3>Otro</h3>
+            <p>Tornillo especial autorroscante y tapa blanca.</p>
+          </article>
+        </div>
 
-        <h3 class="tab-subtitle reveal">Accesorios</h3>
+        <h3 class="tab-subtitle reveal">Anclajes</h3>
         <div class="chip-grid reveal">
-          <span class="chip">Tornillos T1</span>
-          <span class="chip">Tornillos T2</span>
-          <span class="chip">Tornillos drywall</span>
-          <span class="chip">Bulones</span>
-          <span class="chip">Arandelas</span>
-          <span class="chip">Varillas roscadas</span>
-          <span class="chip">Ganchos</span>
-          <span class="chip">Autoperforantes</span>
-          <span class="chip">Remaches pop</span>
-          <span class="chip">Perfiles galvanizados</span>
+          <span class="chip">Carrocero</span>
+          <span class="chip">Tapas UV</span>
+          <span class="chip">Remaches (caja 1000)</span>
+          <span class="chip">Remaches 4x10 (100)</span>
+          <span class="chip">Tacos 3/8 metálicos</span>
+          <span class="chip">Varilla 1m x 3/8</span>
+          <span class="chip">Tuercas 3/8</span>
+          <span class="chip">Tornillos T1 (1000 un)</span>
+          <span class="chip">Punta mecha</span>
         </div>
       </div>
 
@@ -518,10 +739,12 @@
           <div class="kit-card">
             <span class="kit-m2">15 m²</span>
             <h4>Tiny Olímpica</h4>
+            <a href="casa-olimpica.html" class="kit-link">Ver Casa Olímpica →</a>
           </div>
           <div class="kit-card">
             <span class="kit-m2">30 m²</span>
             <h4>Tiny 30</h4>
+            <a href="casa-tiny.html" class="kit-link">Ver Tiny 30 →</a>
           </div>
           <div class="kit-card kit-card--maracana">
             <span class="kit-m2">49 m²</span>
@@ -538,47 +761,32 @@
 </section>
 
 <!-- ============================================================
-     DIFERENCIALES / DISTINCIÓN
+     CLUB DEL COLOCADOR
      ============================================================ -->
-<section class="section-dif" id="diferenciales">
+<section class="section-club" id="club-colocador">
   <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Por qué elegirnos</p>
-    <h2 class="section-title reveal">Diferenciales y distinción</h2>
-
-    <div class="dif-grid">
-      <div class="dif-col dif-col--split dif-col--collapsible reveal">
-        <h3 class="dif-col-title">Diferenciales</h3>
-        <div class="dif-split">
-          <ul class="dif-list">
-            <li><span class="dif-num">01</span><div><strong>Mejor precio</strong><p>Comprá directo, sin intermediarios.</p></div></li>
-            <li><span class="dif-num">02</span><div><strong>Servicio Fast Panels</strong><p>Paneles listos en 24 horas.</p></div></li>
-            <li><span class="dif-num">03</span><div><strong>Logística avanzada</strong><p>Red logística optimizada para entregas seguras y rápidas en todo el país.</p></div></li>
-            <li><span class="dif-num">04</span><div><strong>Flete gratis</strong><p>Consultar zona y monto mínimo.</p></div></li>
-            <li><span class="dif-num">05</span><div><strong>Certificado de garantía</strong><p>Nuestros paneles e instalaciones tienen garantía escrita.</p></div></li>
-          </ul>
-          <ul class="dif-list">
-            <li><span class="dif-num">06</span><div><strong>Postventa</strong><p>Nuestro compromiso no termina con la venta, te acompañamos en cada etapa.</p></div></li>
-            <li><span class="dif-num">07</span><div><strong>Asistencia técnica especializada</strong><p>Te guiamos en la instalación y resolución de dudas.</p></div></li>
-            <li><span class="dif-num">08</span><div><strong>Tarjeta de crédito</strong><p>Crédito de vivienda de 6 hasta 36 cuotas.</p></div></li>
-            <li><span class="dif-num">09</span><div><strong>Descuentos</strong><p>Efectivo y por volumen.</p></div></li>
-            <li><span class="dif-num">10</span><div><strong>Club del Colocador</strong><p>Descuentos exclusivos, entregas optimizadas y mucho más. <a href="#club-colocador" class="dif-link">Conocé el club →</a></p></div></li>
-          </ul>
-        </div>
-        <button type="button" class="dif-show-more" data-show-more>Mostrar más</button>
+    <div class="club-header reveal">
+      <div>
+        <p class="eyebrow">Beneficios para profesionales</p>
+        <h2 class="section-title section-title--light">Club del Colocador</h2>
       </div>
+      <img src="assets/img/logo.png" alt="Isopanel Uruguay" class="club-logo">
+    </div>
 
-      <div class="dif-divider" aria-hidden="true"></div>
+    <div class="club-grid">
+      <ul class="club-benefits reveal">
+        <li>Precios exclusivos con descuentos.</li>
+        <li>Ofertas especiales para miembros.</li>
+        <li>Entregas preferenciales.</li>
+        <li>Flete gratis a todo el país.</li>
+        <li>Descuento en servicio de grúa a todo el país.</li>
+        <li>Atención prioritaria con stock disponible.</li>
+      </ul>
 
-      <div class="dif-col dif-col--collapsible reveal">
-        <h3 class="dif-col-title">Distinción del producto</h3>
-        <ul class="dif-list">
-          <li><span class="dif-num">01</span><div><strong>Ahorro energético</strong><p>Mantiene el frío en verano y el calor en invierno.</p></div></li>
-          <li><span class="dif-num">02</span><div><strong>Estructura liviana y resistente</strong><p>Ideal para techos, paredes y cerramientos.</p></div></li>
-          <li><span class="dif-num">03</span><div><strong>Instalación en 24 horas</strong><p>Rápido, limpio y sin complicaciones.</p></div></li>
-          <li><span class="dif-num">04</span><div><strong>Menor costo de obra</strong><p>Reduce materiales y tiempos de construcción.</p></div></li>
-          <li><span class="dif-num">05</span><div><strong>Variedad de modelos</strong><p>Isopaneles trapezoidales, lisos, con aislamiento EPS o PIR.</p></div></li>
-        </ul>
-        <button type="button" class="dif-show-more" data-show-more>Mostrar más</button>
+      <div class="club-target reveal">
+        <h3>¿A quién está dirigido?</h3>
+        <p>A profesionales de la construcción, colocadores y empresas que trabajen con isopanel.</p>
+        <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="btn btn-primary">Quiero ser miembro</a>
       </div>
     </div>
   </div>
@@ -648,32 +856,47 @@
 </section>
 
 <!-- ============================================================
-     CLUB DEL COLOCADOR
+     DIFERENCIALES / DISTINCIÓN
      ============================================================ -->
-<section class="section-club" id="club-colocador">
+<section class="section-dif" id="diferenciales">
   <div class="section-inner">
-    <div class="club-header reveal">
-      <div>
-        <p class="eyebrow">Beneficios para profesionales</p>
-        <h2 class="section-title section-title--light">Club del Colocador</h2>
+    <p class="eyebrow eyebrow--dark reveal">Por qué elegirnos</p>
+    <h2 class="section-title reveal">Diferenciales y distinción</h2>
+
+    <div class="dif-grid">
+      <div class="dif-col dif-col--split dif-col--collapsible reveal">
+        <h3 class="dif-col-title">Diferenciales</h3>
+        <div class="dif-split">
+          <ul class="dif-list">
+            <li><span class="dif-num">01</span><div><strong>Mejor precio</strong><p>Comprá directo, sin intermediarios.</p></div></li>
+            <li><span class="dif-num">02</span><div><strong>Servicio Fast Panels</strong><p>Paneles listos en 24 horas.</p></div></li>
+            <li><span class="dif-num">03</span><div><strong>Logística avanzada</strong><p>Red logística optimizada para entregas seguras y rápidas en todo el país.</p></div></li>
+            <li><span class="dif-num">04</span><div><strong>Flete gratis</strong><p>Consultar zona y monto mínimo.</p></div></li>
+            <li><span class="dif-num">05</span><div><strong>Certificado de garantía</strong><p>Nuestros paneles e instalaciones tienen garantía escrita.</p></div></li>
+          </ul>
+          <ul class="dif-list">
+            <li><span class="dif-num">06</span><div><strong>Postventa</strong><p>Nuestro compromiso no termina con la venta, te acompañamos en cada etapa.</p></div></li>
+            <li><span class="dif-num">07</span><div><strong>Asistencia técnica especializada</strong><p>Te guiamos en la instalación y resolución de dudas.</p></div></li>
+            <li><span class="dif-num">08</span><div><strong>Tarjeta de crédito</strong><p>Crédito de vivienda de 6 hasta 36 cuotas.</p></div></li>
+            <li><span class="dif-num">09</span><div><strong>Descuentos</strong><p>Efectivo y por volumen.</p></div></li>
+            <li><span class="dif-num">10</span><div><strong>Club del Colocador</strong><p>Descuentos exclusivos, entregas optimizadas y mucho más. <a href="#club-colocador" class="dif-link">Conocé el club →</a></p></div></li>
+          </ul>
+        </div>
+        <button type="button" class="dif-show-more" data-show-more>Mostrar más</button>
       </div>
-      <img src="assets/img/logo.png" alt="Isopanel Uruguay" class="club-logo">
-    </div>
 
-    <div class="club-grid">
-      <ul class="club-benefits reveal">
-        <li>Precios exclusivos con descuentos.</li>
-        <li>Ofertas especiales para miembros.</li>
-        <li>Entregas preferenciales.</li>
-        <li>Flete gratis a todo el país.</li>
-        <li>Descuento en servicio de grúa a todo el país.</li>
-        <li>Atención prioritaria con stock disponible.</li>
-      </ul>
+      <div class="dif-divider" aria-hidden="true"></div>
 
-      <div class="club-target reveal">
-        <h3>¿A quién está dirigido?</h3>
-        <p>A profesionales de la construcción, colocadores y empresas que trabajen con isopanel.</p>
-        <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="btn btn-primary">Quiero ser miembro</a>
+      <div class="dif-col dif-col--collapsible reveal">
+        <h3 class="dif-col-title">Distinción del producto</h3>
+        <ul class="dif-list">
+          <li><span class="dif-num">01</span><div><strong>Ahorro energético</strong><p>Mantiene el frío en verano y el calor en invierno.</p></div></li>
+          <li><span class="dif-num">02</span><div><strong>Estructura liviana y resistente</strong><p>Ideal para techos, paredes y cerramientos.</p></div></li>
+          <li><span class="dif-num">03</span><div><strong>Instalación en 24 horas</strong><p>Rápido, limpio y sin complicaciones.</p></div></li>
+          <li><span class="dif-num">04</span><div><strong>Menor costo de obra</strong><p>Reduce materiales y tiempos de construcción.</p></div></li>
+          <li><span class="dif-num">05</span><div><strong>Variedad de modelos</strong><p>Isopaneles trapezoidales, lisos, con aislamiento EPS o PIR.</p></div></li>
+        </ul>
+        <button type="button" class="dif-show-more" data-show-more>Mostrar más</button>
       </div>
     </div>
   </div>
@@ -721,7 +944,7 @@
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-answer" data-accordion-panel>
-          <p>Sí, tanto los paneles como las instalaciones que realizamos cuentan con garantía escrita de 1 año.</p>
+          <p>Sí, tanto los paneles como las instalaciones que realizamos cuentan con garantía escrita.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -730,7 +953,7 @@
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-answer" data-accordion-panel>
-          <p>Sí, aceptamos tarjeta de crédito hasta en 12 cuotas sin recargo, además de descuentos por pago en efectivo o compra por volumen.</p>
+          <p>Sí, aceptamos tarjeta de crédito hasta en 36 cuotas, además de descuentos por pago en efectivo o compra por volumen.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -751,39 +974,41 @@
      ============================================================ -->
 <section class="section-contacto" id="contacto">
   <div class="contacto-watermark" aria-hidden="true"></div>
-  <div class="section-inner contacto-grid">
-    <div class="contacto-info">
-      <h2 class="section-title section-title--light reveal">Contacto</h2>
-      <p class="contacto-lead reveal">Si tenés alguna otra consulta, podés enviarnos un mensaje vía WhatsApp o email.</p>
+  <div class="section-inner">
+    <h2 class="section-title section-title--light contacto-title reveal">Contacto</h2>
+    <div class="contacto-grid">
+      <div class="contacto-info">
+        <p class="contacto-lead reveal">Si tenés alguna otra consulta, podés enviarnos un mensaje vía WhatsApp o email.</p>
 
-      <div class="contacto-links reveal">
-        <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="contacto-link">
-          <img src="assets/icons/Logos/whatsapp-line.svg" alt="">
-          <span>+598 94 692 000</span>
-        </a>
-        <a href="tel:43721144" class="contacto-link">
-          <img src="assets/icons/Device/phone-line.svg" alt="">
-          <span>4372 1144</span>
-        </a>
-        <a href="mailto:info@isopaneluruguay.com" class="contacto-link">
-          <img src="assets/icons/Business/mail-line.svg" alt="">
-          <span>info@isopaneluruguay.com</span>
-        </a>
-        <a href="https://www.instagram.com/isopaneluruguay/" target="_blank" rel="noopener" class="contacto-link">
-          <img src="assets/icons/Logos/instagram-line.svg" alt="">
-          <span>@isopaneluruguay</span>
-        </a>
+        <div class="contacto-links reveal">
+          <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="contacto-link">
+            <img src="assets/icons/Logos/whatsapp-line.svg" alt="">
+            <span>+598 94 692 000</span>
+          </a>
+          <a href="tel:43721144" class="contacto-link">
+            <img src="assets/icons/Device/phone-line.svg" alt="">
+            <span>4372 1144</span>
+          </a>
+          <a href="mailto:info@isopaneluruguay.com" class="contacto-link">
+            <img src="assets/icons/Business/mail-line.svg" alt="">
+            <span>info@isopaneluruguay.com</span>
+          </a>
+          <a href="https://www.instagram.com/isopaneluruguay/" target="_blank" rel="noopener" class="contacto-link">
+            <img src="assets/icons/Logos/instagram-line.svg" alt="">
+            <span>@isopaneluruguay</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="contacto-map reveal">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15772.352184518013!2d-55.79364968777569!3d-34.7648808004285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f895093700dd3%3A0xf6d843af1edcedcc!2sIsopanel%20Uruguay!5e1!3m2!1ses!2sus!4v1783546721301!5m2!1ses!2sus"
-        title="Ubicación de Isopanel Uruguay"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
+      <div class="contacto-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15772.352184518013!2d-55.79364968777569!3d-34.7648808004285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f895093700dd3%3A0xf6d843af1edcedcc!2sIsopanel%20Uruguay!5e1!3m2!1ses!2sus!4v1783546721301!5m2!1ses!2sus"
+          title="Ubicación de Isopanel Uruguay"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </div>
 </section>

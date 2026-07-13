@@ -71,7 +71,7 @@ ul{ list-style:none; padding:0; }
   align-items:center;
   gap: var(--space-md);
 }
-.main-nav ul{
+.main-nav > ul{
   display:flex;
   gap: 30px;
 }
@@ -97,6 +97,57 @@ ul{ list-style:none; padding:0; }
 .main-nav a:focus-visible{
   outline: 2px solid var(--blue-400);
   outline-offset: 4px;
+}
+
+/* Dropdown "Módulos" */
+.nav-dropdown{ position:relative; }
+.nav-dropdown-btn{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  background:none;
+  border:none;
+  font-family:inherit;
+  font-size: 0.92rem;
+  font-weight:500;
+  letter-spacing:0.02em;
+  color: var(--blue-100);
+  padding: 6px 0;
+}
+.nav-dropdown-btn::after{ content:"▾"; font-size:0.6em; }
+.nav-dropdown-btn:hover,
+.nav-dropdown.is-open .nav-dropdown-btn{ color: var(--white); }
+.main-nav .nav-dropdown-menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:none;
+  flex-direction:column;
+}
+.nav-dropdown.is-open .nav-dropdown-menu{ display:flex; }
+.nav-dropdown-menu a{
+  display:block;
+  font-size: 0.85rem;
+  color: var(--blue-100);
+  padding: 8px 0;
+  white-space:nowrap;
+}
+.nav-dropdown-menu a:hover{ color: var(--white); }
+
+@media (min-width: 761px){
+  .nav-dropdown-menu{
+    position:absolute;
+    top: calc(100% + 14px);
+    left:50%;
+    transform: translateX(-50%);
+    min-width:180px;
+    background: var(--navy-900);
+    border: 1px solid rgba(202,240,248,0.25);
+    padding: 8px 0;
+    gap:0;
+    box-shadow: 0 12px 24px rgba(3,4,94,0.3);
+  }
+  .nav-dropdown-menu a{ padding: 10px 20px; }
 }
 
 .btn-whatsapp{
@@ -437,11 +488,11 @@ ul{ list-style:none; padding:0; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px){
-  .main-nav ul{ gap: 20px; }
+  .main-nav > ul{ gap: 20px; }
 }
 
 @media (max-width: 760px){
-  .main-nav ul{
+  .main-nav > ul{
     position: fixed;
     inset: 0;
     z-index: var(--z-nav);
@@ -458,8 +509,12 @@ ul{ list-style:none; padding:0; }
     transform: translateX(100%);
     transition: transform var(--dur-med) var(--ease);
   }
-  .main-nav ul.is-open{ transform: translateX(0); }
+  .main-nav > ul.is-open{ transform: translateX(0); }
   .main-nav a{ font-size: 1.2rem; }
+  .nav-dropdown{ display:flex; flex-direction:column; align-items:center; }
+  .nav-dropdown-btn{ font-size: 1.2rem; }
+  .nav-dropdown-menu{ align-items:center; gap: var(--space-sm); margin-top: var(--space-sm); }
+  .nav-dropdown-menu a{ font-size: 1rem; }
   .nav-toggle{ display:block; }
   .btn-whatsapp{ display:none; } /* oculto en mobile, queda el flotante */
 

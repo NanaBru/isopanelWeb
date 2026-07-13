@@ -38,6 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- 2b) Dropdown "Módulos" en el nav --- */
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.nav-dropdown-btn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    dropdown.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        dropdown.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
   /* --- 3) Reveal on scroll (para futuras secciones) --- */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
@@ -164,8 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
       item.addEventListener('click', () => {
         const key = item.dataset.lightboxKey;
         const count = parseInt(item.dataset.lightboxCount, 10) || 1;
+        const folder = item.dataset.lightboxFolder || `assets/img/obras2/gallery/${key}`;
+        const ext = item.dataset.lightboxExt || 'jpg';
         photos = Array.from({ length: count }, (_, i) =>
-          `assets/img/obras/gallery/${key}/${String(i + 1).padStart(2, '0')}.jpg`
+          `${folder}/${String(i + 1).padStart(2, '0')}.${ext}`
         );
         caption = item.dataset.lightboxCaption || '';
         index = 0;
@@ -189,6 +220,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowRight') showNext();
     });
   }
+
+  /* --- 9b) Selectores de proyecto (varias obras dentro de una misma categoría) --- */
+  document.querySelectorAll('[data-picker]').forEach(picker => {
+    const pickerKey = picker.dataset.picker;
+    document.querySelectorAll(`[data-picker-open="${pickerKey}"]`).forEach(btn => {
+      btn.addEventListener('click', () => { picker.hidden = false; });
+    });
+    const closePicker = () => { picker.hidden = true; };
+    picker.querySelector('[data-picker-close]')?.addEventListener('click', closePicker);
+    picker.addEventListener('click', (e) => { if (e.target === picker) closePicker(); });
+    picker.querySelectorAll('[data-lightbox-key]').forEach(item => {
+      item.addEventListener('click', closePicker);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (picker.hidden) return;
+      if (e.key === 'Escape') closePicker();
+    });
+  });
 
   /* --- 10) FAQ: acordeón (una pregunta abierta a la vez) --- */
   document.querySelectorAll('[data-accordion]').forEach(accordion => {
