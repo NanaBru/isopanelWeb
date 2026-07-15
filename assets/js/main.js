@@ -8,6 +8,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* --- 0) Hero: slideshow de fondo con crossfade --- */
+  document.querySelectorAll('[data-hero-slideshow]').forEach(slideshow => {
+    const slides = slideshow.querySelectorAll('.hero-bg-slide');
+    if (slides.length < 2) return;
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
+    }, 7000);
+  });
+
   /* --- 1) Header on scroll --- */
   const header = document.querySelector('.site-header');
   const onScroll = () => {
@@ -292,5 +304,152 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = expanded ? 'Mostrar menos' : 'Mostrar más';
     });
   });
+
+  /* --- 12) Formularios de cotización: arman el mensaje y abren WhatsApp --- */
+  document.querySelectorAll('#cotizacion-form, #cotizacion-modal-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const nombre = data.get('nombre').trim();
+      const whatsapp = data.get('whatsapp').trim();
+      const departamento = data.get('departamento');
+      const tipo = data.get('tipo');
+      const medidas = data.get('medidas').trim();
+      const instalacion = data.get('instalacion');
+      const obs = data.get('obs').trim();
+
+      let mensaje = `Hola, quiero cotizar un proyecto.\n`;
+      mensaje += `Nombre: ${nombre}\n`;
+      mensaje += `WhatsApp: ${whatsapp}\n`;
+      mensaje += `Departamento: ${departamento}\n`;
+      mensaje += `Tipo de proyecto: ${tipo}\n`;
+      if (medidas) mensaje += `Medidas / m² aprox: ${medidas}\n`;
+      mensaje += `Instalación: ${instalacion}\n`;
+      if (obs) mensaje += `Observaciones: ${obs}\n`;
+
+      window.open(`https://wa.me/59894692000?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
+
+      const modal = form.closest('[data-modal]');
+      if (modal) closeModal(modal);
+      form.reset();
+    });
+  });
+
+  /* --- 12b) Formulario "Comprar paneles": arma el mensaje y abre WhatsApp --- */
+  const panelesForm = document.getElementById('paneles-modal-form');
+  if (panelesForm) {
+    panelesForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(panelesForm);
+      const nombre = data.get('nombre').trim();
+      const departamento = data.get('departamento');
+      const materiales = data.get('materiales').trim();
+
+      let mensaje = `Hola, quiero comprar material.\n`;
+      mensaje += `Nombre: ${nombre}\n`;
+      mensaje += `Departamento: ${departamento}\n`;
+      mensaje += `Materiales que necesito: ${materiales}\n`;
+
+      window.open(`https://wa.me/59894692000?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
+
+      const modal = panelesForm.closest('[data-modal]');
+      if (modal) closeModal(modal);
+      panelesForm.reset();
+    });
+  }
+
+  /* --- 12c) Formulario "Club del Colocador": arma el mensaje y abre WhatsApp --- */
+  const clubForm = document.getElementById('club-form');
+  if (clubForm) {
+    clubForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(clubForm);
+      const nombre = data.get('nombre').trim();
+      const rubro = data.get('rubro');
+      const zona = data.get('zona');
+      const obrasMes = data.get('obras_mes').trim();
+      const productos = data.get('productos').trim();
+
+      let mensaje = `Hola, soy colocador/constructor y quiero información sobre el Club del Colocador.\n`;
+      mensaje += `Nombre: ${nombre}\n`;
+      mensaje += `Rubro: ${rubro}\n`;
+      mensaje += `Zona de trabajo: ${zona}\n`;
+      if (obrasMes) mensaje += `Obras aproximadas por mes: ${obrasMes}\n`;
+      if (productos) mensaje += `Productos que compra: ${productos}\n`;
+
+      window.open(`https://wa.me/59894692000?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
+      clubForm.reset();
+    });
+  }
+
+  /* --- 13) Modal de cotización: abrir / cerrar --- */
+  const openModal = (modal) => {
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    const firstField = modal.querySelector('input, select, textarea');
+    if (firstField) firstField.focus();
+  };
+  const closeModal = (modal) => {
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+  };
+
+  document.querySelectorAll('[data-open-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = document.getElementById(btn.dataset.openModal);
+      if (modal) openModal(modal);
+    });
+  });
+
+  document.querySelectorAll('[data-modal]').forEach(modal => {
+    modal.querySelectorAll('[data-modal-close]').forEach(btn => {
+      btn.addEventListener('click', () => closeModal(modal));
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal(modal);
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('[data-modal]:not([hidden])').forEach(modal => closeModal(modal));
+  });
+
+  /* --- 14) Guía: buscador de la barra lateral + link activo --- */
+  const guiaSearch = document.getElementById('guia-search-input');
+  const guiaLinks = document.querySelectorAll('[data-guia-link]');
+  if (guiaSearch && guiaLinks.length) {
+    guiaSearch.addEventListener('input', () => {
+      const term = guiaSearch.value.trim().toLowerCase();
+      guiaLinks.forEach(link => {
+        const match = link.textContent.toLowerCase().includes(term);
+        link.toggleAttribute('data-guia-hidden', !match);
+      });
+    });
+
+    guiaLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        guiaLinks.forEach(l => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+      });
+    });
+  }
+
+  /* --- 15) FAQ: buscador de preguntas --- */
+  const faqSearch = document.getElementById('faq-search-input');
+  const faqItems = document.querySelectorAll('.faq-accordion .faq-item');
+  const faqNoResults = document.getElementById('faq-no-results');
+  if (faqSearch && faqItems.length) {
+    faqSearch.addEventListener('input', () => {
+      const term = faqSearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+      faqItems.forEach(item => {
+        const match = item.textContent.toLowerCase().includes(term);
+        item.hidden = !match;
+        if (match) visibleCount++;
+      });
+      if (faqNoResults) faqNoResults.hidden = visibleCount !== 0;
+    });
+  }
 
 });

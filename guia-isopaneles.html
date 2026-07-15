@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://www.isopaneluruguay.com/assets/img/fondo.png">
 <meta property="og:url" content="https://www.isopaneluruguay.com/guia-isopaneles.html">
 
-<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="icon" href="assets/img/logo_azul.png" type="image/png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,7 +128,9 @@
         </ul>
       </li>
       <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="club-colocador.html">Club del Colocador</a></li>
       <li><a href="index.html#obras">Obras</a></li>
+      <li><a href="preguntas-frecuentes.html">FAQ</a></li>
       <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
     <a class="btn-whatsapp" href="https://wa.me/59894692000" target="_blank" rel="noopener">
@@ -158,185 +160,234 @@
 </section>
 
 <!-- ============================================================
-     QUÉ ES UN ISOPANEL
+     GUÍA — layout con barra lateral (buscador + índice) y
+     contenido. Los <div id="..."> de acá abajo son los mismos
+     anclas que antes (#tipos, #modelos, #usos, #faq), más dos
+     temas nuevos: Accesorios y Tornillería.
      ============================================================ -->
-<section class="section-productos">
-  <div class="section-inner">
-    <h2 class="section-title reveal">¿Qué es un isopanel?</h2>
-    <p class="prod-claim reveal">
-      Un isopanel (o panel sándwich) es una placa formada por dos chapas
-      metálicas —normalmente de acero galvanizado prepintado— con un núcleo
-      aislante en el medio. Ese núcleo puede ser EPS (poliestireno
-      expandido) o PIR (poliisocianurato). En una sola pieza resuelve tres
-      cosas a la vez: estructura, aislación térmica y acústica, y
-      terminación final, por lo que reduce materiales y tiempos de obra
-      frente a un techo o pared tradicional.
-    </p>
-  </div>
-</section>
+<section class="section-guia">
+  <div class="section-inner guia-layout">
 
-<!-- ============================================================
-     EPS vs PIR
-     ============================================================ -->
-<section class="section-productos" id="tipos">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Tipos de núcleo</p>
-    <h2 class="section-title reveal">Isopanel EPS vs isopanel PIR</h2>
-    <p class="prod-claim reveal">
-      La principal diferencia entre un isopanel y otro está en el núcleo
-      aislante. Elegir uno u otro depende del uso, el presupuesto y las
-      exigencias técnicas de la obra.
-    </p>
+    <aside class="guia-sidebar">
+      <div class="guia-search">
+        <input type="search" id="guia-search-input" placeholder="Buscar en la guía...">
+      </div>
+      <nav class="guia-nav" aria-label="Contenidos de la guía">
+        <a href="#que-es" data-guia-link>Qué es el isopanel</a>
+        <a href="#tipos" data-guia-link>Isopanel EPS vs PIR</a>
+        <a href="#modelos" data-guia-link>Modelos de techo</a>
+        <a href="#accesorios" data-guia-link>Accesorios y perfiles</a>
+        <a href="#tornilleria" data-guia-link>Tornillería y anclajes</a>
+        <a href="#usos" data-guia-link>Usos frecuentes</a>
+        <a href="#ventajas" data-guia-link>Ventajas</a>
+        <a href="#faq" data-guia-link>Preguntas frecuentes</a>
+      </nav>
+    </aside>
 
-    <div class="table-wrap reveal">
-      <table class="prod-table">
-        <thead>
-          <tr><th>Núcleo</th><th>Características</th><th>Ideal para</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>EPS (poliestireno expandido)</td>
-            <td>Muy buena relación entre aislación térmica y costo. Liviano y de fácil instalación.</td>
-            <td>Viviendas, techos residenciales y comerciales, galpones y depósitos con buena relación rendimiento/costo — línea Balance.</td>
-          </tr>
-          <tr>
-            <td>PIR (poliisocianurato)</td>
-            <td>Mayor eficiencia térmica por centímetro de espesor y mejor comportamiento ante el fuego que el EPS.</td>
-            <td>Instalaciones industriales exigentes, techos y paredes (ISODEC PIR, ISOROOF, ISOWALL PIR) y cámaras frigoríficas (ISOFRIG PIR).</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="guia-content">
+
+      <!-- QUÉ ES UN ISOPANEL -->
+      <div class="guia-block" id="que-es">
+        <h2 class="section-title reveal">¿Qué es un isopanel?</h2>
+        <p class="prod-claim reveal">
+          Un isopanel (o panel sándwich) es una placa formada por dos chapas
+          metálicas —normalmente de acero galvanizado prepintado— con un núcleo
+          aislante en el medio. Ese núcleo puede ser EPS (poliestireno
+          expandido) o PIR (poliisocianurato). En una sola pieza resuelve tres
+          cosas a la vez: estructura, aislación térmica y acústica, y
+          terminación final, por lo que reduce materiales y tiempos de obra
+          frente a un techo o pared tradicional.
+        </p>
+      </div>
+
+      <!-- EPS vs PIR -->
+      <div class="guia-block" id="tipos">
+        <p class="eyebrow eyebrow--dark reveal">Tipos de núcleo</p>
+        <h2 class="section-title reveal">Isopanel EPS vs isopanel PIR</h2>
+        <p class="prod-claim reveal">
+          La principal diferencia entre un isopanel y otro está en el núcleo
+          aislante. Elegir uno u otro depende del uso, el presupuesto y las
+          exigencias técnicas de la obra.
+        </p>
+
+        <div class="table-wrap reveal">
+          <table class="prod-table">
+            <thead>
+              <tr><th>Núcleo</th><th>Características</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EPS (poliestireno expandido)</td>
+                <td>Muy buena relación entre aislación térmica y costo. Liviano y de fácil instalación.</td>
+                <td>Viviendas, techos residenciales y comerciales, galpones y depósitos con buena relación rendimiento/costo — línea Balance.</td>
+              </tr>
+              <tr>
+                <td>PIR (poliisocianurato)</td>
+                <td>Mayor eficiencia térmica por centímetro de espesor y mejor comportamiento ante el fuego que el EPS.</td>
+                <td>Instalaciones industriales exigentes, techos y paredes (ISODEC PIR, ISOROOF, ISOWALL PIR) y cámaras frigoríficas (ISOFRIG PIR).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="prod-claim reveal">
+          ¿No estás seguro de cuál te conviene? <a href="index.html#contacto">Consultanos</a>
+          y te asesoramos sin cargo según tu proyecto — también podés ver el
+          <a href="index.html#isopaneles">catálogo completo de líneas EPS y PIR</a>.
+        </p>
+      </div>
+
+      <!-- MODELOS DE TECHO -->
+      <div class="guia-block" id="modelos">
+        <p class="eyebrow eyebrow--dark reveal">Techos</p>
+        <h2 class="section-title reveal">Modelos de techo más usados</h2>
+
+        <div class="prod-grid reveal">
+          <article class="prod-card">
+            <h3>Isopanel Trapezoidal</h3>
+            <p>Resistencia y eficiencia para techos expuestos, con núcleo EPS o PIR de alta densidad. Es el modelo más elegido para galpones, depósitos, industrias y garajes por su bajo costo de mantenimiento.</p>
+          </article>
+          <article class="prod-card">
+            <h3>IsoElite</h3>
+            <p>Panel liso más teja asfáltica americana, montado sobre estructura metálica, isopanel o tradicional, con barrera hídrica incorporada. Se usa sobre todo en viviendas y quinchos, donde se busca una terminación estética además de la aislación.</p>
+          </article>
+        </div>
+
+        <p class="prod-claim reveal">
+          Vas a encontrar ejemplos reales de estos techos instalados en
+          <a href="index.html#obras">nuestras obras</a>.
+        </p>
+      </div>
+
+      <!-- ACCESORIOS Y PERFILES -->
+      <div class="guia-block" id="accesorios">
+        <p class="eyebrow eyebrow--dark reveal">Terminaciones</p>
+        <h2 class="section-title reveal">Accesorios y perfiles</h2>
+        <p class="prod-claim reveal">
+          Además del panel, toda obra necesita piezas de terminación para
+          que el techo quede completamente sellado e impermeable. Se
+          fabrican en los mismos espesores que los paneles (50 a 250 mm) y
+          también están disponibles en la línea Exclusive, a medida y en el
+          color que elijas.
+        </p>
+        <ul class="check-list reveal">
+          <li><strong>Frontal y lateral gotero</strong> — cierran los bordes del techo y evitan que el agua entre por los laterales.</li>
+          <li><strong>Canalón</strong> — recoge y dirige el agua de lluvia.</li>
+          <li><strong>Cumbrera</strong> — cubre la unión superior entre dos aguas del techo.</li>
+          <li><strong>Babeta</strong> — resuelve el encuentro entre el techo y una pared o chimenea.</li>
+        </ul>
+        <p class="prod-claim reveal">
+          <a href="index.html#isopaneles">Ver catálogo completo de perfiles y accesorios →</a>
+        </p>
+      </div>
+
+      <!-- TORNILLERÍA Y ANCLAJES -->
+      <div class="guia-block" id="tornilleria">
+        <p class="eyebrow eyebrow--dark reveal">Fijación</p>
+        <h2 class="section-title reveal">Tornillería y anclajes</h2>
+        <p class="prod-claim reveal">
+          Cada tipo de superficie donde se ancla el isopanel necesita un kit
+          distinto:
+        </p>
+        <ul class="check-list reveal">
+          <li><strong>Sobre hormigón</strong> — taco metálico, varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</li>
+          <li><strong>Isopanel con isopanel</strong> — pieza en "L", varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</li>
+          <li><strong>Sobre hierro</strong> — tuerca, arandela carrocero, varilla roscada y tapa siliconada blanca.</li>
+          <li><strong>Sobre otras superficies</strong> — tornillo especial autorroscante y tapa blanca.</li>
+        </ul>
+        <p class="prod-claim reveal">
+          También ofrecemos remaches, tacos, punta mecha y tapas UV sueltas
+          para reposición. <a href="index.html#isopaneles">Ver catálogo completo de tornillería →</a>
+        </p>
+      </div>
+
+      <!-- USOS MÁS FRECUENTES -->
+      <div class="guia-block" id="usos">
+        <p class="eyebrow eyebrow--dark reveal">Aplicaciones</p>
+        <h2 class="section-title reveal">Usos más frecuentes del isopanel</h2>
+        <ul class="check-list reveal">
+          <li>Viviendas completas — techo, paredes y kit "arma tu casa"</li>
+          <li>Techos residenciales y comerciales</li>
+          <li>Galpones y depósitos industriales</li>
+          <li>Fábricas y grandes superficies</li>
+          <li>Paredes y tabiques divisorios (línea ISOWALL PIR)</li>
+          <li>Cámaras frigoríficas y frío industrial (línea ISOFRIG PIR)</li>
+          <li>Quinchos y ampliaciones</li>
+        </ul>
+      </div>
+
+      <!-- VENTAJAS -->
+      <div class="guia-block" id="ventajas">
+        <p class="eyebrow eyebrow--dark reveal">Por qué isopanel</p>
+        <h2 class="section-title reveal">Ventajas de construir con isopanel</h2>
+        <ul class="dif-list reveal">
+          <li><span class="dif-num">01</span><div><strong>Ahorro energético</strong><p>Mantiene el frío en verano y el calor en invierno.</p></div></li>
+          <li><span class="dif-num">02</span><div><strong>Estructura liviana y resistente</strong><p>Ideal para techos, paredes y cerramientos.</p></div></li>
+          <li><span class="dif-num">03</span><div><strong>Instalación en 24 horas</strong><p>Rápido, limpio y sin complicaciones.</p></div></li>
+          <li><span class="dif-num">04</span><div><strong>Menor costo de obra</strong><p>Reduce materiales y tiempos de construcción frente a un techo o pared tradicional.</p></div></li>
+          <li><span class="dif-num">05</span><div><strong>Variedad de modelos</strong><p>Isopaneles trapezoidales, lisos, con núcleo EPS o PIR según la exigencia de la obra.</p></div></li>
+        </ul>
+      </div>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <div class="guia-block" id="faq">
+        <p class="eyebrow eyebrow--dark reveal">Dudas frecuentes</p>
+        <h2 class="section-title reveal">Preguntas frecuentes sobre isopanel</h2>
+
+        <div class="faq-accordion" data-accordion>
+          <div class="faq-item">
+            <button class="faq-question" data-accordion-btn aria-expanded="false">
+              <span>¿Qué es un isopanel?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" data-accordion-panel>
+              <p>Es un panel sándwich formado por dos chapas metálicas con un núcleo aislante en el medio (EPS o PIR). Funciona como estructura, aislación térmica/acústica y terminación en un solo material.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" data-accordion-btn aria-expanded="false">
+              <span>¿Cuál es la diferencia entre isopanel EPS e isopanel PIR?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" data-accordion-panel>
+              <p>El EPS ofrece muy buena relación entre aislación y costo, ideal para la mayoría de obras residenciales y comerciales. El PIR rinde más aislación con menor espesor y tiene mejor comportamiento ante el fuego, por eso se usa en instalaciones industriales y cámaras de frío más exigentes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" data-accordion-btn aria-expanded="false">
+              <span>¿Qué espesor de isopanel necesito?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" data-accordion-panel>
+              <p>Depende del uso y el clima de la zona: a mayor espesor, mayor aislación térmica y acústica. Nuestro equipo asesora el espesor correcto según el proyecto sin cargo.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" data-accordion-btn aria-expanded="false">
+              <span>¿El isopanel sirve para paredes además de techos?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" data-accordion-panel>
+              <p>Sí. Además de techos (trapezoidal, IsoElite) fabricamos líneas pensadas para paredes y tabiques, y líneas específicas para cámaras frigoríficas.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" data-accordion-btn aria-expanded="false">
+              <span>¿Para qué tipo de obra se usa el isopanel?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" data-accordion-panel>
+              <p>Se usa en viviendas completas, techos residenciales y comerciales, galpones, depósitos industriales, fábricas y cámaras frigoríficas.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="prod-claim reveal" style="margin-top: var(--space-lg);">
+          ¿Tenés una obra en mente? <a href="index.html#contacto">Pedí tu presupuesto sin cargo</a>.
+        </p>
+      </div>
+
     </div>
-
-    <p class="prod-claim reveal">
-      ¿No estás seguro de cuál te conviene? <a href="index.html#contacto">Consultanos</a>
-      y te asesoramos sin cargo según tu proyecto — también podés ver el
-      <a href="index.html#isopaneles">catálogo completo de líneas EPS y PIR</a>.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================
-     MODELOS DE TECHO
-     ============================================================ -->
-<section class="section-productos" id="modelos">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Techos</p>
-    <h2 class="section-title reveal">Modelos de techo más usados</h2>
-
-    <div class="prod-grid reveal">
-      <article class="prod-card">
-        <h3>Isopanel Trapezoidal</h3>
-        <p>Resistencia y eficiencia para techos expuestos, con núcleo EPS o PIR de alta densidad. Es el modelo más elegido para galpones, depósitos, industrias y garajes por su bajo costo de mantenimiento.</p>
-      </article>
-      <article class="prod-card">
-        <h3>IsoElite</h3>
-        <p>Panel liso más teja asfáltica americana, montado sobre estructura metálica, isopanel o tradicional, con barrera hídrica incorporada. Se usa sobre todo en viviendas y quinchos, donde se busca una terminación estética además de la aislación.</p>
-      </article>
-    </div>
-
-    <p class="prod-claim reveal">
-      Vas a encontrar ejemplos reales de estos techos instalados en
-      <a href="index.html#obras">nuestras obras</a>.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================
-     USOS MÁS FRECUENTES
-     ============================================================ -->
-<section class="section-productos" id="usos">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Aplicaciones</p>
-    <h2 class="section-title reveal">Usos más frecuentes del isopanel</h2>
-    <ul class="check-list reveal">
-      <li>Viviendas completas — techo, paredes y kit "arma tu casa"</li>
-      <li>Techos residenciales y comerciales</li>
-      <li>Galpones y depósitos industriales</li>
-      <li>Fábricas y grandes superficies</li>
-      <li>Paredes y tabiques divisorios (línea ISOWALL PIR)</li>
-      <li>Cámaras frigoríficas y frío industrial (línea ISOFRIG PIR)</li>
-      <li>Quinchos y ampliaciones</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================================================
-     VENTAJAS
-     ============================================================ -->
-<section class="section-diferenciales">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Por qué isopanel</p>
-    <h2 class="section-title reveal">Ventajas de construir con isopanel</h2>
-    <ul class="dif-list reveal">
-      <li><span class="dif-num">01</span><div><strong>Ahorro energético</strong><p>Mantiene el frío en verano y el calor en invierno.</p></div></li>
-      <li><span class="dif-num">02</span><div><strong>Estructura liviana y resistente</strong><p>Ideal para techos, paredes y cerramientos.</p></div></li>
-      <li><span class="dif-num">03</span><div><strong>Instalación en 24 horas</strong><p>Rápido, limpio y sin complicaciones.</p></div></li>
-      <li><span class="dif-num">04</span><div><strong>Menor costo de obra</strong><p>Reduce materiales y tiempos de construcción frente a un techo o pared tradicional.</p></div></li>
-      <li><span class="dif-num">05</span><div><strong>Variedad de modelos</strong><p>Isopaneles trapezoidales, lisos, con núcleo EPS o PIR según la exigencia de la obra.</p></div></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================================================
-     PREGUNTAS FRECUENTES
-     ============================================================ -->
-<section class="section-faq" id="faq">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--dark reveal">Dudas frecuentes</p>
-    <h2 class="section-title reveal">Preguntas frecuentes sobre isopanel</h2>
-
-    <div class="faq-accordion" data-accordion>
-      <div class="faq-item">
-        <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Qué es un isopanel?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer" data-accordion-panel>
-          <p>Es un panel sándwich formado por dos chapas metálicas con un núcleo aislante en el medio (EPS o PIR). Funciona como estructura, aislación térmica/acústica y terminación en un solo material.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Cuál es la diferencia entre isopanel EPS e isopanel PIR?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer" data-accordion-panel>
-          <p>El EPS ofrece muy buena relación entre aislación y costo, ideal para la mayoría de obras residenciales y comerciales. El PIR rinde más aislación con menor espesor y tiene mejor comportamiento ante el fuego, por eso se usa en instalaciones industriales y cámaras de frío más exigentes.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Qué espesor de isopanel necesito?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer" data-accordion-panel>
-          <p>Depende del uso y el clima de la zona: a mayor espesor, mayor aislación térmica y acústica. Nuestro equipo asesora el espesor correcto según el proyecto sin cargo.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿El isopanel sirve para paredes además de techos?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer" data-accordion-panel>
-          <p>Sí. Además de techos (trapezoidal, IsoElite) fabricamos líneas pensadas para paredes y tabiques, y líneas específicas para cámaras frigoríficas.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Para qué tipo de obra se usa el isopanel?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer" data-accordion-panel>
-          <p>Se usa en viviendas completas, techos residenciales y comerciales, galpones, depósitos industriales, fábricas y cámaras frigoríficas.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="prod-claim reveal" style="margin-top: var(--space-lg);">
-      ¿Tenés una obra en mente? <a href="index.html#contacto">Pedí tu presupuesto sin cargo</a>.
-    </p>
   </div>
 </section>
 

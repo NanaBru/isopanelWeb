@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://www.isopaneluruguay.com/img/fondo.png">
 <meta property="og:url" content="https://www.isopaneluruguay.com/">
 
-<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="icon" href="assets/img/logo_azul.png" type="image/png">
 
 <!-- Tipografía: Montserrat (texto) + JetBrains Mono (etiquetas técnicas) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,7 +90,9 @@
         </ul>
       </li>
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="club-colocador.html">Club del Colocador</a></li>
       <li><a href="#obras">Obras</a></li>
+      <li><a href="preguntas-frecuentes.html">FAQ</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a class="btn-whatsapp" href="https://wa.me/59894692000" target="_blank" rel="noopener">
@@ -108,7 +110,12 @@
      HERO — PRIMERA VISTA
      ============================================================ -->
 <section class="hero" id="inicio">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" data-hero-slideshow>
+    <div class="hero-bg-slide is-active"></div>
+    <div class="hero-bg-slide"></div>
+    <div class="hero-bg-slide"></div>
+    <div class="hero-bg-slide"></div>
+  </div>
   <span class="blueprint-corner blueprint-corner--tl" aria-hidden="true"></span>
   <span class="blueprint-corner blueprint-corner--br" aria-hidden="true"></span>
 
@@ -130,8 +137,9 @@
     </p>
 
     <div class="hero-actions">
-      <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
-      <a href="#isopaneles" class="btn btn-secondary">Ver isopaneles</a>
+      <button type="button" class="btn btn-primary" data-open-modal="cotizacion-modal">Cotizar mi proyecto</button>
+      <button type="button" class="btn btn-secondary" data-open-modal="paneles-modal">Comprar paneles</button>
+      <a href="https://wa.me/59894692000?text=Hola%2C%20estoy%20interesado%20a%20entrar%20en%20el%20club%20del%20colocador." target="_blank" rel="noopener" class="btn btn-tertiary">Soy colocador o constructor</a>
     </div>
   </div>
 
@@ -173,33 +181,41 @@
     <p class="eyebrow eyebrow--dark reveal">Instalación</p>
     <h2 class="section-title reveal">Servicios</h2>
 
-    <div class="serv-intro reveal">
-      <h3>Distribución</h3>
-      <p>
-        Distribuimos isopaneles, accesorios y siliconas a todo el país,
-        para particulares, colocadores y empresas constructoras que
-        necesiten los materiales listos para su obra.
-      </p>
-    </div>
+    <div class="serv-intro-grid reveal">
+      <div class="serv-intro">
+        <h3>Distribución</h3>
+        <p>
+          Distribuimos isopaneles, accesorios y siliconas a todo el país,
+          para particulares, colocadores y empresas constructoras que
+          necesiten los materiales listos para su obra.
+        </p>
+      </div>
 
-    <div class="serv-intro reveal">
-      <h3>Instalación profesional</h3>
-      <p>
-        Instalamos lo que fabricamos. Nuestro equipo trabaja en techos
-        residenciales y comerciales, viviendas completas, galpones y
-        depósitos industriales, fábricas y grandes superficies, siempre
-        con garantía de calidad, acompañamiento técnico durante toda la
-        obra, tiempos de instalación rápidos y un resultado final prolijo.
-      </p>
+      <div class="serv-intro">
+        <h3>Instalación profesional</h3>
+        <p>
+          Instalamos lo que fabricamos. Nuestro equipo trabaja en techos
+          residenciales y comerciales, viviendas completas, galpones y
+          depósitos industriales, fábricas y grandes superficies, con
+          garantía de calidad y acompañamiento técnico durante toda la obra.
+        </p>
+      </div>
     </div>
 
     <h3 class="tab-subtitle reveal">Modelos de techo</h3>
     <div class="techo-grid">
       <article class="techo-card reveal">
-        <div class="techo-img" style="background-image:url('assets/img/servicios/trapezoidal.jpg')"></div>
+        <div class="techo-img" style="background-image:url('assets/img/productos/EPS/EPS Engrafado.png')"></div>
         <div class="techo-body">
-          <h4>Isopanel Trapezoidal.</h4>
-          <p>Resistencia y eficiencia para techos expuestos. EPS o PIR de alta densidad. Ideal galpones, depósitos, industrias y garajes.</p>
+          <h4>Isopaneles EPS</h4>
+          <p>Resistencia y eficiencia para techos expuestos, con aislación EPS de alta densidad. Ideal galpones, depósitos, industrias y garajes.</p>
+        </div>
+      </article>
+      <article class="techo-card reveal">
+        <div class="techo-img" style="background-image:url('assets/img/productos/PIR/PIR Trapezoidal.png')"></div>
+        <div class="techo-body">
+          <h4>Isopaneles PIR</h4>
+          <p>Mayor resistencia al fuego y rendimiento térmico superior, con aislación PIR de alta densidad. Ideal galpones, depósitos, industrias y garajes.</p>
         </div>
       </article>
       <button type="button" class="techo-card techo-card--link reveal" data-picker-open="isoelite">
@@ -211,13 +227,7 @@
       </button>
     </div>
 
-    <div class="serv-intro reveal">
-      <h3>Soluciones extras</h3>
-      <p>
-        Brindamos gestión integral en los organismos públicos
-        correspondientes (UTE, OSE) y proyectos arquitectónicos a medida.
-      </p>
-    </div>
+    <p class="serv-extra reveal"><strong>Soluciones extras:</strong> gestión integral en los organismos públicos correspondientes (UTE, OSE) y proyectos arquitectónicos a medida.</p>
   </div>
 </section>
 
@@ -776,17 +786,14 @@
     <div class="club-grid">
       <ul class="club-benefits reveal">
         <li>Precios exclusivos con descuentos.</li>
-        <li>Ofertas especiales para miembros.</li>
-        <li>Entregas preferenciales.</li>
-        <li>Flete gratis a todo el país.</li>
-        <li>Descuento en servicio de grúa a todo el país.</li>
+        <li>Entregas preferenciales y flete gratis a todo el país.</li>
         <li>Atención prioritaria con stock disponible.</li>
       </ul>
 
       <div class="club-target reveal">
         <h3>¿A quién está dirigido?</h3>
         <p>A profesionales de la construcción, colocadores y empresas que trabajen con isopanel.</p>
-        <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="btn btn-primary">Quiero ser miembro</a>
+        <a href="club-colocador.html" class="btn btn-primary">Conocé el Club →</a>
       </div>
     </div>
   </div>
@@ -879,7 +886,7 @@
             <li><span class="dif-num">07</span><div><strong>Asistencia técnica especializada</strong><p>Te guiamos en la instalación y resolución de dudas.</p></div></li>
             <li><span class="dif-num">08</span><div><strong>Tarjeta de crédito</strong><p>Crédito de vivienda de 6 hasta 36 cuotas.</p></div></li>
             <li><span class="dif-num">09</span><div><strong>Descuentos</strong><p>Efectivo y por volumen.</p></div></li>
-            <li><span class="dif-num">10</span><div><strong>Club del Colocador</strong><p>Descuentos exclusivos, entregas optimizadas y mucho más. <a href="#club-colocador" class="dif-link">Conocé el club →</a></p></div></li>
+            <li><span class="dif-num">10</span><div><strong>Club del Colocador</strong><p>Descuentos exclusivos, entregas optimizadas y mucho más. <a href="club-colocador.html" class="dif-link">Conocé el club →</a></p></div></li>
           </ul>
         </div>
         <button type="button" class="dif-show-more" data-show-more>Mostrar más</button>
@@ -910,41 +917,32 @@
     <p class="eyebrow eyebrow--dark reveal">Dudas frecuentes</p>
     <h2 class="section-title reveal">Preguntas frecuentes</h2>
 
-    <!--
-      PENDIENTE: el cliente pidió cargar acá las 18 preguntas y respuestas
-      completas de la sección "7) Preguntas frecuentes" del documento
-      NUEVO_SITE.pdf. Ese archivo todavía no fue entregado, así que se
-      dejan 5 preguntas genéricas de arranque (sin emojis, contenido
-      verificado con lo ya definido en el resto del sitio) para que el
-      acordeón funcione. Reemplazar por las 18 reales apenas se entregue
-      el PDF, respetando esta misma estructura de <details>/<button>.
-    -->
     <div class="faq-accordion" data-accordion>
       <div class="faq-item">
         <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Hacen envíos a todo el país?</span>
+          <span>¿Qué es el isopanel?</span>
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-answer" data-accordion-panel>
-          <p>Sí, contamos con logística propia para entregar en todo Uruguay. El flete es gratuito consultando zona y monto mínimo de compra.</p>
+          <p>Es un panel tipo sándwich compuesto por un núcleo aislante de EPS o PIR, revestido en ambas caras por chapa galvanizada prepintada. Se fabrica a medida y es ampliamente usado en techos, paredes y fachadas por su eficiencia térmica, rapidez de instalación y durabilidad.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Cuánto tarda la instalación?</span>
+          <span>¿Cómo se entregan los materiales?</span>
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-answer" data-accordion-panel>
-          <p>La instalación de un techo estándar se resuelve en 24 horas una vez que el material está en obra.</p>
+          <p>Hacemos envíos a todo Uruguay, con flete gratis a todo el país conforme a compra mínima para cada departamento. Poseemos logística propia con fleteros de confianza para garantizar seguridad y puntualidad.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" data-accordion-btn aria-expanded="false">
-          <span>¿Los paneles tienen garantía?</span>
+          <span>¿Los paneles resisten el fuego y la humedad?</span>
           <span class="faq-icon" aria-hidden="true"></span>
         </button>
         <div class="faq-answer" data-accordion-panel>
-          <p>Sí, tanto los paneles como las instalaciones que realizamos cuentan con garantía escrita.</p>
+          <p>PIR Bromyros cuenta con clasificación Clase II-A de reacción al fuego. Todos los paneles tienen recubrimiento galvanizado prepintado, con alta resistencia a la humedad e intemperie.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -965,6 +963,10 @@
           <p>Sí, se puede ajustar el espesor del panel, el revestimiento exterior y detalles como puertas y ventanas. También hacemos versiones a medida enviando planos.</p>
         </div>
       </div>
+    </div>
+
+    <div class="faq-page-cta reveal">
+      <a href="preguntas-frecuentes.html" class="btn btn-outline">Ver todas las preguntas frecuentes →</a>
     </div>
   </div>
 </section>
@@ -1000,6 +1002,81 @@
         </div>
       </div>
 
+      <form class="contacto-form reveal" id="cotizacion-form">
+        <h3 class="contacto-form-title contacto-form-full">Cotizá tu proyecto</h3>
+        <p class="contacto-form-hint contacto-form-full">Completá tus datos y se abre WhatsApp con todo precargado para enviarnos la consulta.</p>
+
+        <label>
+          <span>Nombre y apellido</span>
+          <input type="text" name="nombre" required>
+        </label>
+
+        <label>
+          <span>WhatsApp</span>
+          <input type="tel" name="whatsapp" required placeholder="09X XXX XXX">
+        </label>
+
+        <label>
+          <span>Departamento</span>
+          <select name="departamento" required>
+            <option value="" disabled selected>Elegí tu departamento</option>
+            <option>Montevideo</option>
+            <option>Canelones</option>
+            <option>Maldonado</option>
+            <option>Colonia</option>
+            <option>San José</option>
+            <option>Florida</option>
+            <option>Lavalleja</option>
+            <option>Rocha</option>
+            <option>Treinta y Tres</option>
+            <option>Cerro Largo</option>
+            <option>Rivera</option>
+            <option>Tacuarembó</option>
+            <option>Salto</option>
+            <option>Artigas</option>
+            <option>Paysandú</option>
+            <option>Río Negro</option>
+            <option>Soriano</option>
+            <option>Flores</option>
+            <option>Durazno</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Tipo de proyecto</span>
+          <select name="tipo" required>
+            <option value="" disabled selected>Elegí una opción</option>
+            <option>Techo instalado</option>
+            <option>Compra de paneles</option>
+            <option>Perfiles y accesorios</option>
+            <option>Soy colocador o constructor</option>
+            <option>Kit o módulo de vivienda</option>
+            <option>Otro</option>
+          </select>
+        </label>
+
+        <label>
+          <span>m² aproximados o medidas</span>
+          <input type="text" name="medidas" placeholder="Ej: 60 m² o 6x10 m">
+        </label>
+
+        <label>
+          <span>¿Con instalación?</span>
+          <select name="instalacion">
+            <option>Sí, con instalación</option>
+            <option>No, solo materiales</option>
+            <option>No estoy seguro todavía</option>
+          </select>
+        </label>
+
+        <label class="contacto-form-full">
+          <span>Observaciones (opcional)</span>
+          <textarea name="obs" rows="2"></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary contacto-form-full">Enviar por WhatsApp</button>
+      </form>
+
       <div class="contacto-map reveal">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15772.352184518013!2d-55.79364968777569!3d-34.7648808004285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f895093700dd3%3A0xf6d843af1edcedcc!2sIsopanel%20Uruguay!5e1!3m2!1ses!2sus!4v1783546721301!5m2!1ses!2sus"
@@ -1023,6 +1100,145 @@
 <a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribinos por WhatsApp">
   <img src="assets/icons/Logos/whatsapp-line.svg" alt="">
 </a>
+
+<!-- ============================================================
+     MODAL — Cotizar mi proyecto (mismo formulario que Contacto)
+     ============================================================ -->
+<div class="modal-overlay" id="cotizacion-modal" data-modal hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="cotizacion-modal-title">
+    <button type="button" class="modal-close" data-modal-close aria-label="Cerrar">&times;</button>
+
+    <form class="contacto-form" id="cotizacion-modal-form">
+      <h3 class="contacto-form-title contacto-form-full" id="cotizacion-modal-title">Cotizá tu proyecto</h3>
+      <p class="contacto-form-hint contacto-form-full">Completá tus datos y se abre WhatsApp con todo precargado para enviarnos la consulta.</p>
+
+      <label>
+        <span>Nombre y apellido</span>
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>
+        <span>WhatsApp</span>
+        <input type="tel" name="whatsapp" required placeholder="09X XXX XXX">
+      </label>
+
+      <label>
+        <span>Departamento</span>
+        <select name="departamento" required>
+          <option value="" disabled selected>Elegí tu departamento</option>
+          <option>Montevideo</option>
+          <option>Canelones</option>
+          <option>Maldonado</option>
+          <option>Colonia</option>
+          <option>San José</option>
+          <option>Florida</option>
+          <option>Lavalleja</option>
+          <option>Rocha</option>
+          <option>Treinta y Tres</option>
+          <option>Cerro Largo</option>
+          <option>Rivera</option>
+          <option>Tacuarembó</option>
+          <option>Salto</option>
+          <option>Artigas</option>
+          <option>Paysandú</option>
+          <option>Río Negro</option>
+          <option>Soriano</option>
+          <option>Flores</option>
+          <option>Durazno</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Tipo de proyecto</span>
+        <select name="tipo" required>
+          <option value="" disabled selected>Elegí una opción</option>
+          <option>Techo instalado</option>
+          <option>Compra de paneles</option>
+          <option>Perfiles y accesorios</option>
+          <option>Soy colocador o constructor</option>
+          <option>Kit o módulo de vivienda</option>
+          <option>Otro</option>
+        </select>
+      </label>
+
+      <label>
+        <span>m² aproximados o medidas</span>
+        <input type="text" name="medidas" placeholder="Ej: 60 m² o 6x10 m">
+      </label>
+
+      <label>
+        <span>¿Con instalación?</span>
+        <select name="instalacion">
+          <option>Sí, con instalación</option>
+          <option>No, solo materiales</option>
+          <option>No estoy seguro todavía</option>
+        </select>
+      </label>
+
+      <label class="contacto-form-full">
+        <span>Observaciones (opcional)</span>
+        <textarea name="obs" rows="2"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary contacto-form-full">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============================================================
+     MODAL — Comprar paneles
+     ============================================================ -->
+<div class="modal-overlay" id="paneles-modal" data-modal hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="paneles-modal-title">
+    <button type="button" class="modal-close" data-modal-close aria-label="Cerrar">&times;</button>
+
+    <form class="contacto-form" id="paneles-modal-form">
+      <h3 class="contacto-form-title contacto-form-full" id="paneles-modal-title">Comprar paneles</h3>
+      <p class="contacto-form-hint contacto-form-full">Completá tus datos y elegí cómo continuar: te escribimos nosotros o abrís WhatsApp directo.</p>
+
+      <label>
+        <span>Nombre y apellido</span>
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>
+        <span>Departamento</span>
+        <select name="departamento" required>
+          <option value="" disabled selected>Elegí tu departamento</option>
+          <option>Montevideo</option>
+          <option>Canelones</option>
+          <option>Maldonado</option>
+          <option>Colonia</option>
+          <option>San José</option>
+          <option>Florida</option>
+          <option>Lavalleja</option>
+          <option>Rocha</option>
+          <option>Treinta y Tres</option>
+          <option>Cerro Largo</option>
+          <option>Rivera</option>
+          <option>Tacuarembó</option>
+          <option>Salto</option>
+          <option>Artigas</option>
+          <option>Paysandú</option>
+          <option>Río Negro</option>
+          <option>Soriano</option>
+          <option>Flores</option>
+          <option>Durazno</option>
+        </select>
+      </label>
+
+      <label class="contacto-form-full">
+        <span>¿Qué materiales necesitás?</span>
+        <textarea name="materiales" rows="3" required placeholder="Ej: paneles de techo EPS, 60 m², espesor 100mm"></textarea>
+      </label>
+
+      <div class="contacto-form-full contacto-form-actions">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a href="https://wa.me/59894692000?text=Hola%2C%20quiero%20comprar%20material." target="_blank" rel="noopener" class="btn btn-secondary" data-modal-close>Hablar directo por WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>
