@@ -1,63 +1,69 @@
 # isopanelWeb
 
-Proyecto web para Isopanel.
+Proyecto web para Isopanel Uruguay. Sitio estático (HTML/CSS/JS puro, sin
+backend ni build step) — se publica subiendo el contenido de este repo tal
+cual a un hosting.
 
-## Estructura de URLs (desde el commit `1e5a2d4`)
+Este repositorio se usa como copia de seguridad del código y como referencia
+de trabajo. **No está pensado para servirse desde GitHub Pages** (el link de
+preview `nanabru.github.io/isopanelWeb/` puede verse roto — ver más abajo por
+qué, y por qué no es un problema real).
 
-Cada página vive en su propia carpeta como `index.html` (ej. `casa-tiny/index.html`
-en vez de `casa-tiny.html`), para tener URLs limpias sin `.html`
-(`isopaneluruguay.com/casa-tiny/`). Todas las rutas a `assets/` (CSS, JS,
-imágenes, PDFs) son **absolutas desde la raíz** (`/assets/...`) para que
-funcionen sin importar la profundidad de carpeta de cada página.
+## Requisito clave para publicarlo: debe quedar en la raíz del dominio
 
-Esto asume que el sitio se sirve **desde la raíz del dominio**
-(`isopaneluruguay.com/`, no `isopaneluruguay.com/alguna-subcarpeta/`). Es como
-funciona cualquier hosting normal para un dominio propio (cPanel, Netlify,
-Vercel, un vhost de Apache/Nginx).
+El sitio usa **URLs limpias sin `.html`** (cada página es una carpeta con su
+`index.html` adentro, ej. `casa-tiny/index.html` → `isopaneluruguay.com/casa-tiny/`)
+y todas las rutas a `assets/` (CSS, JS, imágenes, PDFs) son **absolutas desde
+la raíz** (empiezan con `/assets/...`).
 
-### Por qué el link de GitHub Pages (`nanabru.github.io/isopanelWeb/`) da 404 en todo
+Por eso, quien publique este sitio tiene que asegurarse de que quede
+disponible en la **raíz** del dominio:
 
-GitHub Pages, sin un dominio propio configurado, publica el repo bajo una
-subcarpeta con el nombre del repo (`/isopanelWeb/`), no en la raíz. Como las
-rutas del sitio son absolutas (`/assets/...`), en GitHub Pages apuntan a
-`nanabru.github.io/assets/...` (no existe ahí) en vez de
-`nanabru.github.io/isopanelWeb/assets/...` (donde sí está). Por eso en la
-consola del navegador aparecen 404 de todos los CSS/JS/imágenes.
+- ✅ Correcto: `https://www.isopaneluruguay.com/` sirve directamente el
+  `index.html` de este repo.
+- ❌ Incorrecto: `https://www.isopaneluruguay.com/nueva-web/` o cualquier
+  subcarpeta — ahí todas las rutas `/assets/...` van a dar 404, porque
+  apuntarían a `www.isopaneluruguay.com/assets/...` en vez de
+  `www.isopaneluruguay.com/nueva-web/assets/...`.
 
-**Esto es solo una limitación del link de preview de GitHub Pages, no un bug
-del sitio.** Cuando la agencia de marketing lo publique en la raíz de
-`isopaneluruguay.com`, las rutas absolutas van a funcionar bien.
+Esto es el comportamiento normal de cualquier hosting para un dominio propio
+(cPanel, Netlify, Vercel, un vhost de Apache/Nginx): el contenido que se sube
+queda en la raíz. Así que en la gran mayoría de los casos no hay nada
+especial que configurar — solo confirmarlo con la agencia antes de que
+suban los archivos.
 
-### Archivo CNAME
+## Checklist para la agencia de marketing al publicar
 
-Se agregó un archivo `CNAME` con `www.isopaneluruguay.com` para que, si en
-algún momento se apunta el DNS del dominio a GitHub Pages, este repo se sirva
-desde la raíz de ese dominio (en vez de bajo `/isopanelWeb/`) y las rutas
-absolutas funcionen ahí también. Con el DNS apuntando todavía al hosting
-viejo (WordPress), este archivo no tiene efecto — el link
-`nanabru.github.io/isopanelWeb/` va a seguir dando 404 en los assets hasta que:
+1. Subir **todo** el contenido de este repo (carpetas y archivos) a la raíz
+   del hosting/dominio — no dentro de una subcarpeta.
+2. Verificar que `index.html` quede accesible en `https://www.isopaneluruguay.com/`.
+3. `sitemap.xml` y `robots.txt` ya están en la raíz, listos para
+   `https://www.isopaneluruguay.com/sitemap.xml` y `/robots.txt`.
+4. Dar de alta el dominio en Google Search Console y mandar el sitemap.
+5. Después de publicar, revisar la consola del navegador (F12) en un par de
+   páginas por si algo tira 404 — si pasa, seguramente el sitio quedó en una
+   subcarpeta en vez de en la raíz (ver punto anterior).
 
-1. En **Settings → Pages** del repo se confirme el dominio personalizado
-   `www.isopaneluruguay.com`, y
-2. En el proveedor de DNS del dominio se agregue un registro `CNAME` de `www`
-   apuntando a `nanabru.github.io` (y, si se quiere que ande sin el `www`,
-   registros `A` de la raíz apuntando a las IPs de GitHub Pages).
+## Por qué el link de GitHub Pages puede verse roto (y por qué no importa)
 
-Si el sitio termina hosteado por la agencia de marketing (no en GitHub
-Pages), este archivo `CNAME` es inofensivo y se puede borrar sin problema.
+GitHub Pages, sin configurar un dominio propio, publica el repo bajo una
+subcarpeta con el nombre del repo (`nanabru.github.io/isopanelWeb/`), no en
+la raíz. Como las rutas del sitio son absolutas (`/assets/...`), en GitHub
+Pages terminan apuntando a `nanabru.github.io/assets/...` (no existe ahí) en
+vez de `nanabru.github.io/isopanelWeb/assets/...`. Por eso en la consola del
+navegador aparecen 404 de todos los CSS/JS/imágenes al abrir ese link.
 
-### Si en algún momento hay que revertir esta reorganización
+GitHub Pages acá se usa solo como respaldo del código, no como hosting del
+sitio — este 404 puntual de esa URL no afecta en nada la publicación real en
+`isopaneluruguay.com`.
 
-Si el hosting final termina sirviendo el sitio desde una subcarpeta (no la
-raíz del dominio) y hay que volver a rutas relativas / archivos `.html`
-sueltos en la raíz:
+**Para probar el sitio en tu máquina** mientras se trabaja en él, no usar el
+link de GitHub Pages: correr un servidor local desde la raíz del proyecto y
+abrir eso, por ejemplo:
 
-- El commit que hizo el cambio es `1e5a2d4` ("Reorganiza el sitio en URLs
-  limpias..."). `git show 1e5a2d4 --stat` muestra todos los archivos movidos.
-- Habría que: mover cada `carpeta/index.html` de vuelta a `carpeta.html` en la
-  raíz, y cambiar las rutas `/assets/...` por rutas relativas calculadas según
-  la profundidad real de cada página (`assets/...` para las de la raíz,
-  `../assets/...` para las que estén una carpeta adentro, como pasaba antes).
-- Los links internos entre páginas (`href="/casa-tiny/"`) también habría que
-  volverlos a `href="casa-tiny.html"` (o `../casa-tiny.html` según la
-  profundidad).
+```
+python -m http.server 8000
+```
+
+y entrar a `http://localhost:8000/`. Ahí sí se sirve desde la raíz, igual
+que en producción.
