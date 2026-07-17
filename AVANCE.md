@@ -53,3 +53,58 @@ actualiza cada sesión para poder retomar sin perder contexto.
 ## Notas para retomar
 - El sitio es estático (GitHub Pages), sin backend. Todos los formularios funcionan armando un mensaje y abriendo WhatsApp — es la solución elegida para "V1 rápida" sin CRM.
 - Cuando se pruebe algo visual, usamos `python -m http.server` + Playwright headless para verificar antes de dar por terminada una tarea (capturas + chequeo de consola/404).
+
+
+
+
+16/07/2026
+
+## Sesión 2026-07-16
+
+### Home — hero
+- Barra de specs (`spec-bar`) rehecha: ahora son 4 ítems en vez de 3 — **Logística** (flete gratis), **Respaldo** (garantía escrita), **Izaje** (camión grúa propio) y **Calidad** (obras de referencia en todo Uruguay). Se sacó "Tiempos / Instalación en 24 horas" (seguía pendiente de definición, ver lista de pendientes).
+- CSS de `.spec-item` ajustado (`flex: 1 1 0`, padding con `clamp()`, gap e íconos más chicos) para que los 4 entren en una sola fila sin que ninguno baje de línea.
+- Se quitó el texto `Canelones, Uruguay` que aparecía arriba del `<h1>` en el hero.
+
+### Sección "Quiénes somos"
+- Se movió de su lugar original (después de Casa Maracaná) a **justo arriba de Servicios**.
+- Fondo: se probaron varias variantes (blanco sólido, celeste sólido, textura sola) hasta quedar en la versión final: **fondo celeste (`--blue-100`) + textura `fondo-logo.webp` con `background-blend-mode: multiply`**, para que se vea el celeste con la textura del logo encima sin el blanco tapando todo.
+- Tarjetas Visión/Misión vueltas a blanco para que contrasten bien sobre el nuevo fondo celeste.
+
+### Reordenamiento de colores por sección (alternancia celeste/blanco)
+- **Servicios**: fondo celeste → blanco.
+- **Obras**: fondo blanco → celeste.
+- **Productos**: fondo celeste → blanco.
+
+### Obras — limpieza de galerías
+- **Bella Vista** (módulos): se borró la foto `07.webp` (no correspondía a esa obra) y se bajó `data-lightbox-count` de 7 a 6.
+- **Techos**: se detectó que la imagen `24.webp` ya faltaba en el servidor (por eso tiraba error al cargar) y encima el conteo (37) no coincidía con los archivos reales (36). Se borraron además las pedidas (8, 9, 11, 13, 14, 20, 30), se renombró todo el resto de forma correlativa `01–29.webp` y se ajustó `data-lightbox-count` a 29.
+- **Nuestros clientes**: se sacaron los logos de Ejército Nacional y Global Import; se agregó el logo de **El Clon** (`el-clon.png`, renombrado desde `El clon.png`) justo después de Las Acacias. El filtro blanco y negro ya lo aplica el CSS existente a todos los logos por igual.
+
+### Bug de fondo con imagen no cargaba (`--hero-img`)
+- Se detectó que en todas las mini-landings que usan `.maracana-hero` con `style="--hero-img:url('...')"` inline, la ruta se resolvía **relativa al CSS (`servicios.css`)** y no al HTML — por eso tiraba 404 y solo se veía el overlay azul oscuro. Se corrigió pasando esas rutas a **absolutas desde la raíz (`/assets/...`)** en: `isoelite.html`, `obras/index.html`, `obras/el-clon.html`, `modulos.html`, `casa-tiny.html`, `casa-olimpica.html`.
+
+### IsoElite (`isoelite.html`)
+- Fondo del hero cambiado a `assets/img/obras2/isoElite/salinas/01.webp`.
+- Se agregó el **video institucional** (`IsoElite_VideoInstitucional.mp4`, con timelapse) en un bloque destacado justo después de la descripción inicial, **no** al final junto a los otros 2 videos de obra.
+
+### Diferenciales y distinción
+- Título de la sección cambiado a **"11 razones para elegir Isopanel Uruguay"**.
+- Columna "Diferenciales" reemplazada con las 11 razones nuevas que pasó el jefe (proyecto llave en mano, experiencia comprobada, asesoramiento técnico, izaje especializado, logística nacional, garantía escrita, seguridad, financiación, postventa, flete gratis, Club del Colocador).
+- La columna "Distinción del producto" se dejó sin cambios (así lo pidió el jefe).
+
+### Preguntas frecuentes (`preguntas-frecuentes.html` + mini-FAQ de la home)
+- Se agregaron 9 preguntas nuevas (espesor según proyecto, presupuesto con/sin instalación, garantía de paneles e instalación, entregas/instalaciones en todo Uruguay, plazos de fabricación y entrega, financiación en cuotas, obra llave en mano, personalización de Casa Maracaná, qué es IsoElite), tanto en el acordeón visible como en el schema `FAQPage` (JSON-LD).
+- La pregunta "¿Los paneles resisten el fuego y la humedad?" ya existía: se reemplazó su respuesta por la versión nueva y más completa que pasó el jefe.
+- **Se eliminaron todas las menciones a "Bromyros" y "EPS 118" en todo el sitio** (ya no se trabaja con esas líneas): aparecían en 4 respuestas del FAQ completo y 1 en el mini-FAQ de la home.
+- Mini-FAQ de la home: se achicó de 5 a **3 preguntas** + botón "Ver todas las preguntas frecuentes →".
+
+### Navegación
+- Se cambió el link del menú de **"FAQ" a "Preguntas"** en las 11 páginas del sitio.
+
+### Guía Isopaneles (`guia-isopaneles.html`)
+- Sección "Modelos de techo más usados": la tarjeta "Isopanel Trapezoidal" pasó a ser **"Isopanel EPS"** con el texto nuevo del jefe; se agregó una tarjeta nueva **"Isopanel PIR"** (resistencia al fuego, mejor aislamiento térmico); "IsoElite" actualizada con el texto nuevo.
+
+### Productos (home)
+- Paneles PIR: se sacó la tarjeta "PU Trapezoidal".
+- Perfiles: se sacaron las tarjetas "Frontal Gotero PU" y "Lateral Gotero PU".

@@ -129,11 +129,10 @@
    ============================================================ */
 .section-nosotros{
   position: relative;
-  background:
-    linear-gradient(rgba(202,240,248,0.55), rgba(202,240,248,0.55)),
-    url('../img/fondo-logo.webp');
+  background: var(--blue-100) url('../img/fondo-logo.webp');
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
 }
 
 .nosotros-panel{

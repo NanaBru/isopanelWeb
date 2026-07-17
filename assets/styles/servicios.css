@@ -2,7 +2,7 @@
    SERVICIOS
    ============================================================ */
 .section-servicios{
-  background: var(--blue-100);
+  background: var(--white);
   min-height: 100vh;
   display:flex;
   align-items:center;

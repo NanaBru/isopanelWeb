@@ -1,7 +1,7 @@
 /* ============================================================
    PRODUCTOS
    ============================================================ */
-.section-productos{ background: var(--blue-100); }
+.section-productos{ background: var(--white); }
 .section-productos .section-inner{ padding-top: var(--space-md); padding-bottom: var(--space-md); }
 .section-productos .section-title{ margin-bottom: var(--space-sm); }
 

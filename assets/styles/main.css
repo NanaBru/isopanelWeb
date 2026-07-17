@@ -385,12 +385,14 @@ ul{ list-style:none; padding:0; }
 .spec-item{
   display:flex;
   align-items:center;
-  gap: 14px;
-  padding: 22px var(--gutter);
+  gap: 10px;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 18px clamp(12px, 2vw, 28px);
   border-right: 1px solid rgba(202,240,248,0.22);
 }
 .spec-item:last-child{ border-right:none; }
-.spec-item img{ height: 26px; width: 26px; flex-shrink:0; filter: invert(1); }
+.spec-item img{ height: 22px; width: 22px; flex-shrink:0; filter: invert(1); }
 .spec-text{ display:flex; flex-direction:column; }
 .spec-label{
   font-family: var(--font-mono);

@@ -1,7 +1,7 @@
 /* ============================================================
    OBRAS
    ============================================================ */
-.section-obras{ background: var(--white); }
+.section-obras{ background: var(--blue-100); }
 .section-obras .section-inner{ padding-top: var(--space-md); padding-bottom: var(--space-md); }
 .section-obras .section-title{ margin-bottom: var(--space-sm); }
 
@@ -50,6 +50,11 @@
   background: var(--navy-900);
   cursor:default;
 }
+.obras-item--text[href]{
+  cursor:pointer;
+  transition: background var(--dur-fast) var(--ease);
+}
+.obras-item--text[href]:hover{ background: var(--blue-700); }
 .obras-item--text span{
   position:static;
   background:none;
