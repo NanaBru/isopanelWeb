@@ -26,10 +26,25 @@ consola del navegador aparecen 404 de todos los CSS/JS/imágenes.
 
 **Esto es solo una limitación del link de preview de GitHub Pages, no un bug
 del sitio.** Cuando la agencia de marketing lo publique en la raíz de
-`isopaneluruguay.com`, las rutas absolutas van a funcionar bien. Decisión
-tomada: no tocar el código por esto — GitHub Pages queda como está (roto en
-esa URL puntual) y para probar en local se sigue usando
-`python -m http.server` desde la raíz del proyecto.
+`isopaneluruguay.com`, las rutas absolutas van a funcionar bien.
+
+### Archivo CNAME
+
+Se agregó un archivo `CNAME` con `www.isopaneluruguay.com` para que, si en
+algún momento se apunta el DNS del dominio a GitHub Pages, este repo se sirva
+desde la raíz de ese dominio (en vez de bajo `/isopanelWeb/`) y las rutas
+absolutas funcionen ahí también. Con el DNS apuntando todavía al hosting
+viejo (WordPress), este archivo no tiene efecto — el link
+`nanabru.github.io/isopanelWeb/` va a seguir dando 404 en los assets hasta que:
+
+1. En **Settings → Pages** del repo se confirme el dominio personalizado
+   `www.isopaneluruguay.com`, y
+2. En el proveedor de DNS del dominio se agregue un registro `CNAME` de `www`
+   apuntando a `nanabru.github.io` (y, si se quiere que ande sin el `www`,
+   registros `A` de la raíz apuntando a las IPs de GitHub Pages).
+
+Si el sitio termina hosteado por la agencia de marketing (no en GitHub
+Pages), este archivo `CNAME` es inofensivo y se puede borrar sin problema.
 
 ### Si en algún momento hay que revertir esta reorganización
 
