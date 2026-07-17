@@ -168,6 +168,25 @@
   vertical-align: top;
 }
 
+.prod-table-panel{
+  max-height:0;
+  overflow:hidden;
+  transition: max-height var(--dur-med) var(--ease);
+}
+.prod-table-toggle{
+  display:block;
+  margin: var(--space-sm) auto 0;
+  background:none;
+  border: 1px solid var(--blue-500);
+  color: var(--blue-700);
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight:600;
+  text-align:center;
+  cursor:pointer;
+}
+.prod-table-toggle:hover{ background: var(--blue-100); }
+
 .check-list{ display:flex; flex-direction:column; gap: 10px; margin-bottom: var(--space-md); }
 .check-list li{
   position:relative;

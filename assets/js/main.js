@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.addEventListener('click', () => {
         const key = item.dataset.lightboxKey;
         const count = parseInt(item.dataset.lightboxCount, 10) || 1;
-        const folder = item.dataset.lightboxFolder || `assets/img/obras2/gallery/${key}`;
+        const folder = item.dataset.lightboxFolder || `/assets/img/obras2/gallery/${key}`;
         const ext = item.dataset.lightboxExt || 'jpg';
         photos = Array.from({ length: count }, (_, i) =>
           `${folder}/${String(i + 1).padStart(2, '0')}.${ext}`

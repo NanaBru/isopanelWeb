@@ -17,8 +17,12 @@
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
+/* Por defecto se muestra una sola fila (3 ítems); el resto queda
+   detrás del botón "Ver más" para que la sección no supere 100vh. */
+.obras-grid > *:nth-child(n+4){ display:none; }
+.obras-grid.is-expanded > *:nth-child(n+4){ display:flex; }
 .obras-item{
   position:relative;
   aspect-ratio: 4/3;
@@ -198,28 +202,21 @@
   .obras-grid{ grid-template-columns: 1fr; }
 }
 
-.obras-show-more{ display:none; }
-
-@media (max-width: 760px){
-  .obras-grid{ margin-bottom: var(--space-sm); }
-  .obras-grid > *:nth-child(n+3){ display:none; }
-  .obras-grid.is-expanded > *:nth-child(n+3){ display:flex; }
-
-  .obras-show-more{
-    display:block;
-    width:100%;
-    margin-bottom: var(--space-xl);
-    background:none;
-    border: 1px solid var(--blue-500);
-    color: var(--blue-700);
-    padding: 12px 20px;
-    font-size: 0.88rem;
-    font-weight:600;
-    text-align:center;
-    transition: background var(--dur-fast) var(--ease);
-  }
-  .obras-show-more:hover{ background: var(--blue-100); }
+.obras-show-more{
+  display:block;
+  width:100%;
+  margin-bottom: var(--space-sm);
+  background:none;
+  border: 1px solid var(--blue-500);
+  color: var(--blue-700);
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  font-weight:600;
+  text-align:center;
+  cursor:pointer;
+  transition: background var(--dur-fast) var(--ease);
 }
+.obras-show-more:hover{ background: var(--blue-100); }
 
 /* ============================================================
    CLUB DEL COLOCADOR
@@ -228,18 +225,21 @@
 .section-title--light{ color: var(--white); }
 
 .club-header{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap: var(--space-md);
   margin-bottom: var(--space-lg);
+  padding-right: 260px;
 }
 .club-header .eyebrow{ margin-bottom: var(--space-xs); }
 .club-header .section-title{ margin-bottom: 0; }
 .club-logo{
-  height: 140px;
+  position:absolute;
+  top: -35px;
+  right: 100px;
+  height: 150px;
   width: auto;
-  flex-shrink: 0;
 }
 
 .club-grid{
@@ -279,8 +279,8 @@
 }
 
 @media (max-width: 760px){
-  .club-header{ flex-direction:column; align-items:flex-start; gap: var(--space-sm); }
-  .club-logo{ height: 90px; order: -1; }
+  .club-header{ flex-direction:column; align-items:flex-start; gap: var(--space-sm); padding-right:0; padding-top: 100px; }
+  .club-logo{ position:absolute; top:0; right:0; height: 90px; }
   .club-grid{ grid-template-columns: 1fr; }
   .club-target{ border-left:none; padding-left:0; border-top: 1px solid rgba(202,240,248,0.25); padding-top: var(--space-md); }
 }
