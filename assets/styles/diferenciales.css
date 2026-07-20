@@ -167,6 +167,12 @@
   font-size: var(--fs-lead);
   color: var(--ink);
 }
+/* El justify estira los espacios entre palabras de forma fea
+   cuando el ancho es chico y el párrafo tiene pocas palabras
+   por línea, así que en mobile alineamos a la izquierda. */
+@media (max-width: 760px){
+  .text-block p{ text-align: left; text-align-last: left; }
+}
 
 .vision-mision{
   display:grid;
