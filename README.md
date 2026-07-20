@@ -67,3 +67,68 @@ python -m http.server 8000
 
 y entrar a `http://localhost:8000/`. Ahí sí se sirve desde la raíz, igual
 que en producción.
+
+## SEO y hosting — notas (2026-07-17)
+
+### Qué es el SEO y estado actual
+
+SEO (Search Engine Optimization) es el conjunto de señales que le dicen a
+Google de qué trata el sitio y qué tan confiable es, para que aparezca
+arriba en búsquedas como "isopanel" o "isopanel Uruguay". No depende del
+hosting en sí, sino sobre todo de contenido, backlinks y presencia local.
+
+Estado actual del sitio (verificado en `index.html`, `robots.txt` y
+`sitemap.xml`):
+
+- ✅ `<title>` con "Isopanel Uruguay" al frente
+- ✅ Meta description clara con call-to-action
+- ✅ `<h1>Isopanel Uruguay</h1>`
+- ✅ Open Graph tags (`og:title`, `og:description`)
+- ✅ `robots.txt` con `Allow: /` y referencia al sitemap
+- ✅ `sitemap.xml` con URLs limpias en `https://www.isopaneluruguay.com/...`
+
+Pendiente / recomendado para mejorar el posicionamiento:
+
+1. **Google Business Profile** — clave para que aparezca en el mapa/panel
+   lateral al buscar "isopanel Uruguay" (más importante que casi cualquier
+   otra cosa para búsquedas locales).
+2. **Google Search Console** — dar de alta el dominio y mandar el sitemap
+   (ver checklist de la agencia más arriba) para saber si Google ya indexó
+   el sitio y con qué términos llega gente.
+3. **Backlinks** — que otras webs uruguayas (proveedores, clientes,
+   directorios de empresas, cámaras de comercio) enlacen al sitio.
+4. **Contenido/blog** — páginas tipo "cuánto cuesta un techo de isopanel en
+   Uruguay" atraen tráfico de búsqueda orgánico.
+5. Definir una sola versión canónica del dominio (con `www` o sin `www`) y
+   redirigir la otra con 301 — el sitemap ya usa `www`, así que esa debería
+   ser la versión principal.
+
+### Hosting recomendado: Vercel (o Hostinger como alternativa simple)
+
+Para hostear `isopaneluruguay.com` con buen rendimiento y sin depender de
+GitHub Pages, las opciones evaluadas:
+
+- **Vercel** (recomendado): rápido (edge network, ayuda a Core Web Vitals),
+  gratis para este tipo de sitio, deploy sencillo conectando el repo de
+  GitHub.
+- **Hostinger**: alternativa más simple para gestión del día a día en
+  Uruguay, con soporte local, si no se quiere depender de GitHub/Vercel.
+- **Cloudflare Pages**: alternativa gratuita similar a Vercel.
+
+### Cómo usar dominio propio en Vercel
+
+Sí se puede usar `isopaneluruguay.com` en vez del subdominio de Vercel
+(`algo.vercel.app`), y el sitio queda funcionando bajo el dominio propio:
+
+1. Conectar el repo de GitHub a Vercel (o hacer deploy manual) — respeta el
+   requisito de quedar en la raíz del dominio, igual que con cualquier otro
+   hosting (ver checklist más arriba).
+2. En el panel de Vercel, agregar el dominio `isopaneluruguay.com` y
+   `www.isopaneluruguay.com`.
+3. Vercel entrega los registros DNS a cargar (un `A`/`ALIAS` para el
+   dominio raíz y un `CNAME` para `www`) donde esté comprado el dominio.
+4. Tras la propagación (minutos a horas), el sitio responde en
+   `isopaneluruguay.com` con HTTPS automático; la URL `*.vercel.app` deja de
+   ser visible al usuario final.
+5. Configurar la redirección 301 de la versión no canónica (con/sin `www`)
+   a la canónica — Vercel lo hace automático al configurar bien el dominio.
