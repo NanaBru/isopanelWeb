@@ -11,17 +11,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.isopaneluruguay.com/modulos/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.isopaneluruguay.com/casa-olimpica/</loc>
+    <loc>https://www.isopaneluruguay.com/nosotros/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.isopaneluruguay.com/casa-tiny/</loc>
+    <loc>https://www.isopaneluruguay.com/arma-tu-casa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isopaneluruguay.com/isopaneles/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isopaneluruguay.com/tiny-house-olimpica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.isopaneluruguay.com/tiny-30/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -2,3 +2,6 @@
 *.mp4
 *.mov
 *.avi
+
+# Archivos personales / documentación interna: no forman parte del sitio
+copia_basura/

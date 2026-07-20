@@ -435,6 +435,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- 15b) Catálogo (/isopaneles/): buscador que filtra todas las categorías --- */
+  const catalog = document.querySelector('[data-catalog]');
+  const catalogSearch = document.getElementById('catalog-search-input');
+  const catalogNoResults = document.getElementById('catalog-no-results');
+  if (catalog && catalogSearch) {
+    const items = catalog.querySelectorAll('[data-catalog-item]');
+    const groups = catalog.querySelectorAll('[data-cat-group]');
+
+    catalogSearch.addEventListener('input', () => {
+      const term = catalogSearch.value.trim().toLowerCase();
+      const isSearching = term.length > 0;
+      catalog.classList.toggle('is-searching', isSearching);
+
+      if (!isSearching) {
+        items.forEach(item => item.hidden = false);
+        groups.forEach(group => group.classList.remove('is-empty'));
+        if (catalogNoResults) catalogNoResults.hidden = true;
+        return;
+      }
+
+      let totalVisible = 0;
+      groups.forEach(group => {
+        const groupItems = group.querySelectorAll('[data-catalog-item]');
+        let visibleInGroup = 0;
+        groupItems.forEach(item => {
+          const haystack = (item.dataset.catalogSearch || item.textContent).toLowerCase();
+          const match = haystack.includes(term);
+          item.hidden = !match;
+          if (match) { visibleInGroup++; totalVisible++; }
+        });
+        group.classList.toggle('is-empty', visibleInGroup === 0);
+      });
+      if (catalogNoResults) catalogNoResults.hidden = totalVisible !== 0;
+    });
+  }
+
   /* --- 15) FAQ: buscador de preguntas --- */
   const faqSearch = document.getElementById('faq-search-input');
   const faqItems = document.querySelectorAll('.faq-accordion .faq-item');

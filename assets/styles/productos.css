@@ -254,3 +254,96 @@
   .tabs-nav{ overflow-x:auto; flex-wrap:nowrap; }
   .tab-btn{ white-space:nowrap; }
 }
+
+.prod-page-cta{
+  text-align:center;
+  margin-top: var(--space-md);
+}
+
+/* ============================================================
+   CATÁLOGO (/isopaneles/) — grilla de productos con foto
+   ============================================================ */
+.catalog-search{
+  max-width: 820px;
+  margin: 0 auto var(--space-md);
+}
+.catalog-search input{
+  width:100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(10,17,40,0.2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--navy-900);
+  background: var(--white);
+}
+.catalog-search input:focus{
+  outline: 2px solid var(--blue-300);
+  outline-offset: 1px;
+}
+.catalog-no-results{
+  max-width: 820px;
+  margin: 0 auto var(--space-md);
+  color: rgba(10,17,40,0.7);
+}
+.catalog-no-results a{ color: var(--blue-700); font-weight:600; }
+
+/* En modo búsqueda se muestran todas las categorías a la vez */
+.catalog.is-searching .tab-panel{ display:block; }
+.catalog.is-searching .tab-subtitle{ display: none; }
+.catalog.is-searching [data-cat-group].is-empty{ display:none; }
+
+.catalog-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.catalog-card{
+  border: 1px solid rgba(10,17,40,0.12);
+  display:flex;
+  flex-direction:column;
+}
+.catalog-photo{
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position:center;
+  background-color: var(--blue-100);
+}
+.catalog-photo--icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.catalog-photo--icon svg{ width: 46%; height: 46%; opacity: 0.55; }
+.catalog-body{ padding: var(--space-sm); flex:1; display:flex; flex-direction:column; }
+.catalog-cat-badge{
+  display:none;
+  align-self:flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-700);
+  border: 1px solid var(--blue-300);
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+.catalog.is-searching .catalog-cat-badge{ display:inline-block; }
+.catalog-card h4{
+  font-size: 1rem;
+  font-weight:700;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+.catalog-card p{
+  font-size: 0.85rem;
+  color: rgba(10,17,40,0.65);
+  margin-bottom: var(--space-sm);
+}
+.catalog-card .btn-outline{
+  margin-top:auto;
+  align-self:flex-start;
+  padding: 10px 16px;
+  font-size: 0.82rem;
+}

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catálogo de Isopaneles | Isopanel Uruguay</title>
+<meta name="description" content="Catálogo completo de isopanel: paneles EPS y PIR, perfiles, tornillería, selladores y kits Arma tu Casa. Buscá y filtrá por categoría, con fotos y fichas técnicas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.isopaneluruguay.com/isopaneles/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_UY">
+<meta property="og:title" content="Catálogo de Isopaneles | Isopanel Uruguay">
+<meta property="og:description" content="Paneles EPS y PIR, perfiles, tornillería, selladores y kits Arma tu Casa. Catálogo completo con fotos y fichas técnicas.">
+<meta property="og:image" content="https://www.isopaneluruguay.com/img/fondo.png">
+<meta property="og:url" content="https://www.isopaneluruguay.com/isopaneles/">
+
+<link rel="icon" href="/assets/img/logo_azul.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/styles/variables.css">
+<link rel="stylesheet" href="/assets/styles/main.css">
+<link rel="stylesheet" href="/assets/styles/diferenciales.css">
+<link rel="stylesheet" href="/assets/styles/productos.css">
+<link rel="stylesheet" href="/assets/styles/servicios.css">
+<link rel="stylesheet" href="/assets/styles/obras.css">
+<link rel="stylesheet" href="/assets/styles/faq.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER (idéntico al de index.html; los anchors de sección
+     apuntan de vuelta a index.html porque viven ahí)
+     ============================================================ -->
+<header class="site-header">
+  <a href="/#inicio" class="brand" aria-label="Isopanel Uruguay — Inicio">
+    <img src="/assets/img/logo.png" alt="Isopanel Uruguay">
+  </a>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="/#inicio">Inicio</a></li>
+      <li><a href="/#servicios">Servicios</a></li>
+      <li><a href="/#obras">Obras</a></li>
+      <li><a href="/isopaneles/" aria-current="page">Productos</a></li>
+      <li><a href="/club-colocador/">Club del Colocador</a></li>
+      <li><a href="/guia-isopaneles/">Guía Isopaneles</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-btn" aria-expanded="false">Módulos</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/arma-tu-casa/">Arma tu casa</a></li>
+          <li><a href="/tiny-house-olimpica/">Casa Olímpica</a></li>
+          <li><a href="/tiny-30/">Tiny</a></li>
+          <li><a href="/maracana/">Casa Maracaná</a></li>
+          <li><a href="https://wa.me/59894692000?text=Hola%2C%20quiero%20un%20m%C3%B3dulo%20100%25%20personalizado" target="_blank" rel="noopener">100% Personalizado a tu gusto</a></li>
+        </ul>
+      </li>
+      <li><a href="/nosotros/">Nosotros</a></li>
+      <li><a href="/preguntas-frecuentes/">Preguntas</a></li>
+      <li><a href="/#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn-whatsapp" href="https://wa.me/59894692000" target="_blank" rel="noopener">
+      <img src="/assets/icons/Logos/whatsapp-color.svg" alt="">
+      <span>Escribinos</span>
+    </a>
+  </nav>
+
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+  </button>
+</header>
+
+<!-- ============================================================
+     CATÁLOGO — página completa
+     ============================================================ -->
+<section class="section-productos section-productos--page" id="catalogo">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--dark reveal">Catálogo</p>
+    <h1 class="section-title reveal">Isopaneles</h1>
+    <p class="faq-page-lead reveal">
+      Todo nuestro catálogo de isopanel en un solo lugar: paneles EPS y PIR,
+      perfiles, tornillería, selladores y kits Arma tu Casa. Filtrá por
+      categoría con las pestañas o buscá directamente el producto que
+      necesitás.
+    </p>
+
+    <div class="catalog-search reveal">
+      <input type="search" id="catalog-search-input" placeholder="Buscar un producto... (ej: ISOWALL, canalón, cumbrera)">
+    </div>
+    <p class="catalog-no-results" id="catalog-no-results" hidden>No encontramos productos que coincidan con tu búsqueda. Probá con otra palabra o <a href="https://wa.me/59894692000?text=Hola%2C%20estoy%20buscando%20un%20producto%20que%20no%20encontr%C3%A9%20en%20el%20cat%C3%A1logo." target="_blank" rel="noopener">escribinos por WhatsApp</a>.</p>
+
+    <div class="tabs catalog" data-tabs data-catalog>
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn is-active" data-tab-btn="eps" role="tab" aria-selected="true">Paneles EPS</button>
+        <button class="tab-btn" data-tab-btn="pir" role="tab" aria-selected="false">Paneles PIR</button>
+        <button class="tab-btn" data-tab-btn="perfiles" role="tab" aria-selected="false">Perfiles</button>
+        <button class="tab-btn" data-tab-btn="tornilleria" role="tab" aria-selected="false">Tornillería</button>
+        <button class="tab-btn" data-tab-btn="selladores" role="tab" aria-selected="false">Selladores y Espumas</button>
+        <button class="tab-btn" data-tab-btn="kit" role="tab" aria-selected="false">Kit Arma tu Casa</button>
+      </div>
+
+      <!-- ===== PANELES EPS ===== -->
+      <div class="tab-panel is-active" data-tab-panel="eps" role="tabpanel">
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="eps montfrío techo panel eps">
+            <span class="catalog-cat-badge">EPS</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/EPS/EPS Engrafado.png')"></div>
+            <div class="catalog-body">
+              <h4>EPS Montfrío Techo</h4>
+              <p>Ancho útil 113,5 cm · espesores 50 a 250 mm · unión engrafada.</p>
+              <div class="prod-actions">
+                <a href="/#contacto" class="btn btn-outline">Consultar</a>
+                <a href="/assets/fichas%20tecnicas/paneles-eps-techo.pdf" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica</a>
+              </div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="eps montfrío pared panel eps">
+            <span class="catalog-cat-badge">EPS</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/EPS/EPS Engrafado2.png')"></div>
+            <div class="catalog-body">
+              <h4>EPS Montfrío Pared</h4>
+              <p>Ancho útil 113,5 cm · espesores 50 a 250 mm · unión autoencastre.</p>
+              <div class="prod-actions">
+                <a href="/#contacto" class="btn btn-outline">Consultar</a>
+                <a href="/assets/fichas%20tecnicas/paneles-eps-pared.pdf" target="_blank" rel="noopener" class="btn btn-outline">Ficha técnica</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== PANELES PIR ===== -->
+      <div class="tab-panel" data-tab-panel="pir" role="tabpanel">
+        <h3 class="tab-subtitle reveal">Techo</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isodec pir techo panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Trapezoidal.png')"></div>
+            <div class="catalog-body">
+              <h4>ISODEC</h4>
+              <p>Ancho útil 112 cm · espesores 50, 80 y 120 mm · blanco.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isoroof 3g pir techo panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Engrafado.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOROOF 3G</h4>
+              <p>Ancho útil 100 cm · espesores 30 a 100 mm · blanco/gris/rojo.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isoroof plus pir techo panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Trapezoidal.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOROOF PLUS</h4>
+              <p>Ancho útil 100 cm · espesores 30, 50 y 80 mm · int. imit. madera.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isoroof foil pir techo panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Engrafado.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOROOF FOIL</h4>
+              <p>Ancho útil 100 cm · espesores 30 y 50 mm · int. film blanco.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isoroof eco foil pir techo panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Trapezoidal.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOROOF ECO FOIL</h4>
+              <p>Ancho útil 100 cm · espesor 30 mm · acero/chapa, int. film blanco.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+        <a href="/assets/fichas%20tecnicas/paneles-pir-techo.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica PIR Techo (PDF)</a>
+
+        <h3 class="tab-subtitle reveal">Pared</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isowall pir pared panel">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Engrafado.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOWALL</h4>
+              <p>Ancho útil 100 cm · espesor 50 mm · blanco/gris/rojo.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="isofrig pir pared panel frigorífico">
+            <span class="catalog-cat-badge">PIR</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/productos/PIR/PIR Trapezoidal.png')"></div>
+            <div class="catalog-body">
+              <h4>ISOFRIG</h4>
+              <p>Ancho útil 100 cm · espesores 40 a 200 mm · residencial o cámaras frigoríficas.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+        <a href="/assets/fichas%20tecnicas/paneles-pir-pared.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica PIR Pared (PDF)</a>
+      </div>
+
+      <!-- ===== PERFILES ===== -->
+      <div class="tab-panel" data-tab-panel="perfiles" role="tabpanel">
+        <h3 class="tab-subtitle reveal">Accesorios para Techo</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="frontal gotero perfil techo">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v10a6 6 0 0 0 6 6h10"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Frontal Gotero</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="lateral gotero perfil techo">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v10a6 6 0 0 0 6 6h10"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Lateral Gotero</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="canalón perfil techo">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v10a6 6 0 0 0 6 6h10"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Canalón</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="cumbrera perfil techo">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v10a6 6 0 0 0 6 6h10"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Cumbrera</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="babeta perfil techo">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v10a6 6 0 0 0 6 6h10"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Babeta</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="tab-subtitle reveal">Accesorios para Pared</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="perfil u pared">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v13a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V4"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>U</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="ángulo exterior pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16h16"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Ángulo Exterior</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="ángulo interior pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16h16"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Ángulo Interior</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 3 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="ángulo estructural aluminio pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16h16"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Ángulo Estructural Aluminio</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 5,75 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="ángulo estructural galvanizado pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16h16"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Ángulo Estructural Galvanizado</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 6 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="pgu pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v13a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V4"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>PGU</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 6 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="pgu blanco pared perfil">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 4v13a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V4"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>PGU Blanco</h4>
+              <p>Material EPS/PIR · espesores 50 a 250 mm · largo 6 m.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+        <a href="/assets/fichas%20tecnicas/Accesorios.pdf" target="_blank" rel="noopener" class="btn btn-outline reveal">Ficha técnica Accesorios (PDF)</a>
+
+        <h3 class="tab-subtitle reveal">Productos Exclusivos</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="exclusive by isopanel uruguay perfiles a medida colores">
+            <span class="catalog-cat-badge">Perfiles</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16h16"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Exclusive by Isopanel Uruguay</h4>
+              <p>Perfiles a medida, hasta 12 metros, amplia paleta de colores a elección.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== TORNILLERÍA ===== -->
+      <div class="tab-panel" data-tab-panel="tornilleria" role="tabpanel">
+        <h3 class="tab-subtitle reveal">Kits de anclaje para techo</h3>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="kit anclaje hormigón tornillería">
+            <span class="catalog-cat-badge">Tornillería</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Hormigón</h4>
+              <p>Taco metálico, varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="kit anclaje isopanel con isopanel tornillería">
+            <span class="catalog-cat-badge">Tornillería</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Isopanel con Isopanel</h4>
+              <p>Pieza en "L", varilla roscada, arandela carrocero, tuerca y tapa siliconada blanca.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="kit anclaje hierro tornillería">
+            <span class="catalog-cat-badge">Tornillería</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Hierro</h4>
+              <p>Tuerca, arandela carrocero, arandela carrocero, tuerca, varilla roscada y tapa siliconada blanca.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="kit anclaje otro tornillo autorroscante">
+            <span class="catalog-cat-badge">Tornillería</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <div class="catalog-body">
+              <h4>Otro</h4>
+              <p>Tornillo especial autorroscante y tapa blanca.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="tab-subtitle reveal">Anclajes</h3>
+        <div class="chip-grid reveal">
+          <span class="chip">Carrocero</span>
+          <span class="chip">Tapas UV</span>
+          <span class="chip">Remaches (caja 1000)</span>
+          <span class="chip">Remaches 4x10 (100)</span>
+          <span class="chip">Tacos 3/8 metálicos</span>
+          <span class="chip">Varilla 1m x 3/8</span>
+          <span class="chip">Tuercas 3/8</span>
+          <span class="chip">Tornillos T1 (1000 un)</span>
+          <span class="chip">Punta mecha</span>
+        </div>
+      </div>
+
+      <!-- ===== SELLADORES Y ESPUMAS ===== -->
+      <div class="tab-panel" data-tab-panel="selladores" role="tabpanel">
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="k+d wurth sellador">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>K+D Wurth</h4>
+              <p>Sellador de alta adherencia para uniones expuestas a la intemperie.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="sikaflex 221 sellador">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>Sikaflex 221</h4>
+              <p>Adhesivo sellador elástico multiuso de referencia en la obra.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="polímero 40 wurth sellador">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>Polímero 40 Wurth</h4>
+              <p>Sellador de polímero MS para juntas de alta exigencia.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="sika sil c sellador silicona">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>Sika Sil C</h4>
+              <p>Sellador de silicona neutra para uniones de terminación.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="neutra wurth silicona sellador">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>Neutra Wurth</h4>
+              <p>Silicona neutra de bajo olor apta para interior y exterior.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="espuma de poliuretano">
+            <span class="catalog-cat-badge">Selladores</span>
+            <div class="catalog-photo catalog-photo--icon" aria-hidden="true">
+              <img src="/assets/icons/Design/drop-line.svg" alt="" style="width:40%;opacity:0.55">
+            </div>
+            <div class="catalog-body">
+              <h4>Espuma de poliuretano</h4>
+              <p>Relleno y aislación de huecos y pasajes de instalaciones.</p>
+              <div class="prod-actions"><a href="/#contacto" class="btn btn-outline">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== KIT ARMA TU CASA ===== -->
+      <div class="tab-panel" data-tab-panel="kit" role="tabpanel">
+        <p class="prod-claim reveal">Un kit completo para levantar tu casa, con divisiones interiores ya definidas.</p>
+        <div class="catalog-grid" data-cat-group>
+          <article class="catalog-card" data-catalog-item data-catalog-search="tiny olímpica casa olimpica 15 m2 kit arma tu casa">
+            <span class="catalog-cat-badge">Kit</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/modulos/olimpica/01.jpg')"></div>
+            <div class="catalog-body">
+              <h4>Tiny Olímpica — 15 m²</h4>
+              <p>Módulo llave en mano con baño, dormitorio y living-cocina integrado.</p>
+              <div class="prod-actions"><a href="/tiny-house-olimpica/" class="btn btn-outline">Ver Casa Olímpica →</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="tiny 30 30 m2 kit arma tu casa">
+            <span class="catalog-cat-badge">Kit</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/modulos/tiny/01.jpg')"></div>
+            <div class="catalog-body">
+              <h4>Tiny 30 — 30 m²</h4>
+              <p>Módulo llave en mano de 30 m², con divisiones interiores ya definidas.</p>
+              <div class="prod-actions"><a href="/tiny-30/" class="btn btn-outline">Ver Tiny 30 →</a></div>
+            </div>
+          </article>
+          <article class="catalog-card" data-catalog-item data-catalog-search="maracaná casa maracana 49 m2 kit arma tu casa">
+            <span class="catalog-cat-badge">Kit</span>
+            <div class="catalog-photo" style="background-image:url('/assets/img/obras2/Nuestros Modulos/MARACANA/01 MaracanaE11.webp')"></div>
+            <div class="catalog-body">
+              <h4>Maracaná — 49 m²</h4>
+              <p>Vivienda llave en mano de 49 m², pensada para la familia uruguaya.</p>
+              <div class="prod-actions"><a href="/maracana/" class="btn btn-outline">Ver Casa Maracaná →</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="reveal">También se puede fabricar a medida enviando planos. Plazo de entrega: 15 a 20 días hábiles desde la seña.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p>Ruta Interbalnearia, Fortín de Santa Rosa, Canelones, Uruguay</p>
+    <p>Isopanel Uruguay © 2026</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/59894692000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribinos por WhatsApp">
+  <img src="/assets/icons/Logos/whatsapp-line.svg" alt="">
+</a>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
