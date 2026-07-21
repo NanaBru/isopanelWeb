@@ -330,6 +330,10 @@ ul{ list-style:none; padding:0; }
 }
 
 .btn{
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
   padding: 16px 32px;
   border-radius: var(--radius-sm);
   border: none;
