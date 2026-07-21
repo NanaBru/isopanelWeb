@@ -99,16 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-tabs]').forEach(tabs => {
     const btns = tabs.querySelectorAll('[data-tab-btn]');
     const panels = tabs.querySelectorAll('[data-tab-panel]');
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.tabBtn;
-        btns.forEach(b => {
-          b.classList.toggle('is-active', b === btn);
-          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-        });
-        panels.forEach(p => p.classList.toggle('is-active', p.dataset.tabPanel === target));
+
+    const activate = (target) => {
+      btns.forEach(b => {
+        const match = b.dataset.tabBtn === target;
+        b.classList.toggle('is-active', match);
+        b.setAttribute('aria-selected', match ? 'true' : 'false');
       });
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.tabPanel === target));
+    };
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => activate(btn.dataset.tabBtn));
     });
+
+    // Deep link: /isopaneles/#perfiles abre esa pestaña directamente
+    const hashTarget = window.location.hash.slice(1);
+    if (hashTarget && tabs.querySelector(`[data-tab-btn="${hashTarget}"]`)) {
+      activate(hashTarget);
+    }
   });
 
   /* --- 5) Slider de Valores (Quiénes somos) --- */
