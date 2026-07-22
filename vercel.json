@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/casa-maracana",
+      "destination": "/maracana/",
+      "permanent": true
+    },
+    {
+      "source": "/casa-maracana/",
+      "destination": "/maracana/",
+      "permanent": true
+    }
+  ]
+}
